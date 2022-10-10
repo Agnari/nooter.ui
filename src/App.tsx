@@ -1,19 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Demo from './MUI_demo';
+import Demo from './MuiDemo';
+import { // React route komponentai deklaruoti, bet kol kas niekur nenaudojami
+  Routes,
+  Route,
+  Link,
+  Outlet,
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-            <Demo />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <p>Lukas has edited this</p>
-        <p>Routing is added</p>
+        <Demo />
+        <p>Routing is added(only components declared)</p>
         <a
           className="App-link"
           href="https://reactjs.org"
