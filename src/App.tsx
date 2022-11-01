@@ -5,6 +5,7 @@ import { Login } from './pages/Login';
 import { Register } from './pages/Register';
 import { PasswordReset } from './pages/PasswordReset';
 import { NewPost } from './pages/NewPost';
+import { EditPost } from './pages/EditPost';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
@@ -26,6 +27,8 @@ function App() {
           <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5 }}> //for testing
             New Post
           </Button>
+          <Button href="/editpost" variant="outlined" sx={{ my: 1, mx: 1.5 }}> //Edit Post test
+          </Button>
           <Button href="/login" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
             Login
           </Button>
@@ -38,6 +41,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
+        <Route path="/editpost" element={<EditPost />} />
       </Routes>
     </>
 
