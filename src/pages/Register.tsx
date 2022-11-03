@@ -33,6 +33,8 @@ export function Register() {
     }
 
     return (
+        <Container style={{background: "linear-gradient(to left, #A97637, #545454)", borderRadius: 40}} sx={{width: '50%'}}>
+        <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}}>
         <Container component="main" maxWidth="xs">
             <CssBaseline />
             <Box
@@ -52,6 +54,8 @@ export function Register() {
                         label="Username"
                         name="username"
                         autoComplete="username"
+                        inputProps={{style:{fontFamily: "Righteous"}}}
+                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
                     />
                     <TextField
                         margin="normal"
@@ -61,6 +65,8 @@ export function Register() {
                         label="Email Address"
                         name="email"
                         autoComplete="email"
+                        inputProps={{style:{fontFamily: "Righteous"}}}
+                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
                     />
                     <TextField
                         margin="normal"
@@ -71,25 +77,30 @@ export function Register() {
                         type="password"
                         id="password"
                         autoComplete="new-password"
+                        inputProps={{style:{fontFamily: "Righteous"}}}
+                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
                     />
                     <Button
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{ mt: 3, mb: 2 }}
 
+                        sx={{ mt: 3, mb: 2, backgroundColor: "#A97637", borderRadius: 5, fontFamily: "Righteous" }}
+                     
                     >
                         Sign Up
                     </Button>
                     <Grid container justifyContent="flex-end">
-                        <Grid item>
-                            <Link href="/login" variant="body2">
+                        <Grid item style={{paddingBottom: 20}}>
+                            <Link href="/login" variant="body2" style={{fontFamily: "Righteous", color: "black"}}>
                                 Already have an account? Sign in
                             </Link>
                         </Grid>
                     </Grid>
                 </Box>
             </Box>
+        </Container>
+        </Container>
         </Container>
     );
 }

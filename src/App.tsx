@@ -11,6 +11,7 @@ import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '@mui/material/Link';
+import { url } from 'inspector';
 
 function App() {
   return (
@@ -19,22 +20,26 @@ function App() {
         position="static"
         color="default"
         elevation={0}
-        sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+        sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundColor: "#242323", borderColor: "#878787", borderRadius: 10 }}
       >
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link variant="h6" color="inherit" href="/" noWrap sx={{ flexGrow: 1 }}>
+          <Link variant="h6" color="inherit" href="/" underline="hover" noWrap sx={{ flexGrow: 1, fontFamily: "Righteous", color: "white" }}>
             NOOTER
           </Link>
-          <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5 }}> 
-          //for testing New Post
+
+          <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "white", color: "white" }}> //for testing
+            New Post
           </Button>
-          <Button href="/editpost" variant="outlined" sx={{ my: 1, mx: 1.5 }}> 
-          //Edit Post test
-          </Button>
-          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5 }}> 
+          <Button href="/editpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "white", color: "white" }}> //Edit Post test
+          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
           Your Posts
           </Button>
-          <Button href="/login" variant="outlined" sx={{ my: 1, mx: 1.5 }}>
+   
+          </Button>
+          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
+          Your Posts
+          </Button>
+          <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous" }}>
             Login
           </Button>
         </Toolbar>
