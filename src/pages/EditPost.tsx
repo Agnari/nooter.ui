@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 
 export function EditPost() {
     return (
-        <Container style={{background: "linear-gradient(to left, #A97637, #737373)", borderRadius: 40}}>
+        <Container style={{background: "linear-gradient(to left, #A97637, #545454)", borderRadius: 40}} sx={{width: '83%'}}>
         <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}}>
         
         <Container maxWidth="md">

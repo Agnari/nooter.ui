@@ -8,10 +8,10 @@ import Container from '@mui/material/Container';
 
 export function Login() {
     return (
-        <Container style={{background: "linear-gradient(to left, #A97637, #737373)", borderRadius: 40}}>
-        <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}}>
+        <Container style={{background: "linear-gradient(to left, #A97637, #545454 )", borderRadius: 40}} sx={{width:'40%'}}>
+        <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}} >
        
-        <Container component="main" maxWidth="xs">
+        <Container component="main" maxWidth="xs" >
             <CssBaseline />
             <Box
                 sx={{
