@@ -31,14 +31,11 @@ function App() {
             New Post
           </Button>
           <Button href="/editpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "white", color: "white" }}> //Edit Post test
-          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
-          Your Posts
-          </Button>
-   
           </Button>
           <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
           Your Posts
           </Button>
+  
           <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous" }}>
             Login
           </Button>
