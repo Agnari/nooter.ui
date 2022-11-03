@@ -6,6 +6,7 @@ import { Register } from './pages/Register';
 import { PasswordReset } from './pages/PasswordReset';
 import { NewPost } from './pages/NewPost';
 import { EditPost } from './pages/EditPost';
+import { YourPosts } from './pages/YourPosts';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
@@ -25,10 +26,15 @@ function App() {
           <Link variant="h6" color="inherit" href="/" underline="hover" noWrap sx={{ flexGrow: 1, fontFamily: "Righteous", color: "white" }}>
             NOOTER
           </Link>
+
           <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "white", color: "white" }}> //for testing
             New Post
           </Button>
           <Button href="/editpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "white", color: "white" }}> //Edit Post test
+          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
+          Your Posts
+          </Button>
+   
           </Button>
           <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
           Your Posts
@@ -46,6 +52,7 @@ function App() {
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
         <Route path="/editpost" element={<EditPost />} />
+        <Route path="/yourposts" element={<YourPosts />} />
       </Routes>
     </>
 

@@ -5,8 +5,10 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import { useNavigate } from 'react-router-dom';
 
 export function Register() {
+    const navigate = useNavigate();
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -15,7 +17,20 @@ export function Register() {
             email: data.get('email'),
             password: data.get('password'),
         });
-    };
+
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                username: data.get('username'),
+                email: data.get('email'),
+                password: data.get('password'),
+            })
+        };
+        fetch('https://localhost:7018/api/users', requestOptions)
+            .then(response => response.json())
+            .then(() => navigate('/login'))
+    }
 
     return (
         <Container style={{background: "linear-gradient(to left, #A97637, #545454)", borderRadius: 40}} sx={{width: '50%'}}>
@@ -69,8 +84,9 @@ export function Register() {
                         type="submit"
                         fullWidth
                         variant="contained"
+
                         sx={{ mt: 3, mb: 2, backgroundColor: "#A97637", borderRadius: 5, fontFamily: "Righteous" }}
-                        href="\login"
+                     
                     >
                         Sign Up
                     </Button>
