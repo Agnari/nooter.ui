@@ -19,16 +19,16 @@ export function YourPosts() {
                 {title.map((title) => (
                     <Grid item key={title} xs={12} sm={12} md={12}>
                         <Card
-                            sx={{ height: '87%', display: 'flex', flexDirection: 'column', borderRadius: 3, background: "linear-gradient(80deg, white, darkgrey)", borderBottom: (theme) => `8px solid ${theme.palette.divider}`, borderStyle: "solid", borderColor: "#A97637" }}
+                            sx={{ height: '87%', display: 'flex', flexDirection: 'column', borderRadius: 3, background: "linear-gradient(80deg, darkgray, gray)", borderBottom: (theme) => `8px solid ${theme.palette.divider}`, borderStyle: "solid", borderColor: "#A97637" }}
                         >
                             <Stack direction="row">
                                 <CardContent sx={{ flexGrow: 1 }}>
-                                    <p style={{fontFamily: "Righteous", fontWeight: "bold", fontSize: 15 }}>
+                                    <p style={{fontFamily: "Righteous", fontWeight: "bold", fontSize: 15, color: "#181818" }}>
                                         {title}
                                     </p>
                                 </CardContent>
                                 <CardActions>
-                                    <Button href="/editpost" size="small" variant="contained" style={{ fontFamily: "Righteous", color: "black", backgroundColor: "#A97637", borderRadius: 20 }}>Edit</Button>
+                                    <Button href="/editpost" size="small" variant="contained" style={{ fontFamily: "Righteous", color: "black", backgroundColor: "#A97637", borderRadius: 20 }} sx={{ border: 0.7, borderColor: "darkgrey" }}>Edit</Button>
                                 </CardActions>
                             </Stack>
                         </Card>

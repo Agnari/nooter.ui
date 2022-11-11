@@ -29,12 +29,9 @@ function App() {
 
           <Button size="medium" href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "#A97637", color: "#A97637", borderRadius: 20 }}>  New Post
           </Button>
-          <Button size="medium" href="/editpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "#A97637", color: "#A97637", borderRadius: 20 }}> Edit Post 
-          </Button>
           <Button size="medium" href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20 }}> 
           Your Posts
           </Button>
-  
           <Button size="large" href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous" }}>
             Login
           </Button>
