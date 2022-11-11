@@ -33,7 +33,7 @@ export function Register() {
     }
 
     return (
-        <Container style={{background: "linear-gradient(to left, #A97637, #545454)", borderRadius: 40}} sx={{width: '50%'}}>
+        <Container style={{background: "linear-gradient(to left, #A97637, #60759c)", borderRadius: 40}} sx={{width: '50%'}}>
         <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}}>
         <Container component="main" maxWidth="xs">
             <CssBaseline />
@@ -56,6 +56,7 @@ export function Register() {
                         autoComplete="username"
                         inputProps={{style:{fontFamily: "Righteous"}}}
                         InputLabelProps={{style:{fontFamily: "Righteous"}}}
+                        
                     />
                     <TextField
                         margin="normal"
