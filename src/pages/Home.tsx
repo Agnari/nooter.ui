@@ -3,7 +3,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 
 export function Home(){
-    
+
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState([]);
     useEffect(() => {
@@ -79,5 +79,6 @@ export function Home(){
         </footer>
     </>
     );
+  
 }
 
