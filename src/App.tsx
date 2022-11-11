@@ -21,7 +21,7 @@ function App() {
         color="default"
         elevation={0}
         sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundColor: "#242323", borderColor: "#878787", borderRadius: 10 }}
-      >
+      >    
         <Toolbar sx={{ flexWrap: 'wrap' }}>
           <Link variant="h6" color="inherit" href="/" underline="hover" noWrap sx={{ flexGrow: 1, fontFamily: "Righteous", color: "white", fontSize: 27 }}>
             NOOTER
