@@ -13,7 +13,8 @@ const title = ['Title 1', 'Title 2', 'Title 3', 'Title 4', 'Title 5']
 
 export function YourPosts() {
     return (
-        <Container maxWidth="md">
+
+            <Container maxWidth="md">
             <Container>
             <h2 style={{fontFamily: "Righteous", background: "lightgrey", borderRadius: 10}}>Your Posts</h2>
             </Container>

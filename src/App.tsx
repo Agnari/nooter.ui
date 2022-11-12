@@ -11,6 +11,8 @@ import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
+
 
 function App() {
   return (
@@ -19,11 +21,11 @@ function App() {
         position="static"
         color="default"
         elevation={0}
-        sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundColor: "#242323", borderColor: "#ce5704", borderBottomLeftRadius: 20, borderBottomRightRadius: 20, borderBottomStyle: "groove" }}
+        sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundImage: "url(https://www.toptal.com/designers/subtlepatterns/uploads/5-dots.png)", borderColor: "#ce5704", borderBottomLeftRadius: 20, borderBottomRightRadius: 20, borderBottomStyle: "groove" }}
       >
 
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link variant="h6" color="inherit" href="/" underline="hover" noWrap sx={{ flexGrow: 1, fontFamily: "Righteous", color: "white", fontSize: 27 }}>
+          <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", fontWeight: "bold", color: "white", fontSize: 27, filter: "drop-shadow(2px 2px 2px #A4BBFF)" }}>
             NOOTER
           </Link>
 
