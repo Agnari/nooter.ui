@@ -44,7 +44,7 @@ export function Register() {
                 }}
             >
                 <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-                    <TextField
+                    <TextField sx={{borderColor: "black", border: 1, borderRadius: 1, borderStyle:'groove'}}
                         margin="normal"
                         required
                         fullWidth
@@ -53,10 +53,10 @@ export function Register() {
                         name="username"
                         autoComplete="username"
                         inputProps={{style:{fontFamily: "Righteous"}}}
-                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
+                        InputLabelProps={{style:{fontFamily: "Cabin Sketch"}}}
                         
                     />
-                    <TextField
+                    <TextField sx={{borderColor: "black", border: 1, borderRadius: 1, borderStyle:'groove'}}
                         margin="normal"
                         required
                         fullWidth
@@ -67,7 +67,7 @@ export function Register() {
                         inputProps={{style:{fontFamily: "Righteous"}}}
                         InputLabelProps={{style:{fontFamily: "Cabin Sketch"}}}
                     />
-                    <TextField
+                    <TextField sx={{borderColor: "black", border: 1, borderRadius: 1, borderStyle:'groove'}}
                         margin="normal"
                         required
                         fullWidth
