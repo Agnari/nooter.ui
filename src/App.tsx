@@ -21,7 +21,7 @@ function App() {
         position="static"
         color="default"
         elevation={0}
-        sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundImage: "url(https://www.toptal.com/designers/subtlepatterns/uploads/5-dots.png)", borderColor: "#ce5704", borderBottomLeftRadius: 20, borderBottomRightRadius: 20, borderBottomStyle: "groove" }}
+        sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundImage:"linear-gradient(to bottom, #ffb02e, #ce5704)", borderColor: "#ce5704", borderRadius: 20, borderBottomStyle: "groove", filter: "drop-shadow(0px 15px 20px red)"}}
       >
 
         <Toolbar sx={{ flexWrap: 'wrap' }}>

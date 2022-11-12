@@ -6,7 +6,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import * as React from 'react';
-import Box from '@mui/material/Box';
+
 
 const title = ['Title 1', 'Title 2', 'Title 3', 'Title 4', 'Title 5']
 
@@ -16,7 +16,7 @@ export function YourPosts() {
 
             <Container maxWidth="md">
             <Container>
-            <h2 style={{fontFamily: "Righteous", background: "lightgrey", borderRadius: 10}}>Your Posts</h2>
+            <h2>Your Posts</h2>
             </Container>
             <Grid container spacing={4}>
                 {title.map((title) => (
