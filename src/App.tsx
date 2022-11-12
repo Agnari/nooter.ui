@@ -1,4 +1,6 @@
 import './App.css';
+import './animations.css';
+import { Component } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
@@ -12,7 +14,8 @@ import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
-
+import React from 'react';
+import { url } from 'inspector';
 
 function App() {
   return (
@@ -22,6 +25,7 @@ function App() {
         color="default"
         elevation={0}
         sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundImage:"linear-gradient(to bottom, #ffb02e, #ce5704)", borderColor: "#ce5704", borderRadius: 20, borderBottomStyle: "groove", filter: "drop-shadow(0px 15px 20px red)"}}
+    
       >
 
         <Toolbar sx={{ flexWrap: 'wrap' }}>
@@ -52,5 +56,6 @@ function App() {
     </>
 
   );
+  
 }
 export default App;
