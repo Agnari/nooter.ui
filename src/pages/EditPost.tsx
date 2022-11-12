@@ -10,7 +10,7 @@ export function EditPost() {
         <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}}>
         
         <Container maxWidth="md">
-            <h2 style={{fontFamily: "Righteous", paddingTop: 15, fontSize: 30 }}>Edit Post</h2>
+            <h2 style={{fontFamily: "Cabin Sketch", paddingTop: 15, fontSize: 30 }}>Edit Post</h2>
 
             <TextField
                 margin="normal"
@@ -18,8 +18,8 @@ export function EditPost() {
                 required
                 fullWidth
                 placeholder="Change Post Title..."
-                inputProps={{style:{fontFamily: "Righteous"}}}
-                InputLabelProps={{style:{fontFamily: "Righteous"}}}
+                inputProps={{style:{fontFamily: "Cabin Sketch"}}}
+                InputLabelProps={{style:{fontFamily: "Cabin Sketch"}}}
 
             />
             <TextField

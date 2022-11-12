@@ -33,12 +33,12 @@ function App() {
             NOOTER
           </Link>
 
-          <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "#A97637", color: "#A97637", borderRadius: 20, left: 30 }}>  New Post
+          <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "white", color: "white", borderRadius: 20, left: 30, fontFamily: "Cabin Sketch", filter: "drop-shadow(1px 1px 1px black)" }}>  New Post
           </Button>
-          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20, left: 30 }}> 
+          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "white", borderColor: "white", borderRadius: 20, left: 30, fontFamily: "Cabin Sketch", filter: "drop-shadow(1px 1px 1px black)" }}> 
           Your Posts
           </Button>
-          <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20 }}>
+          <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Cabin Sketch", left: 20, filter: "drop-shadow(2px 2px 2px black)" }}>
             Login
           </Button>
         </Toolbar>
