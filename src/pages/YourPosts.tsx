@@ -13,8 +13,8 @@ const title = ['Title 1', 'Title 2', 'Title 3', 'Title 4', 'Title 5']
 
 export function YourPosts() {
     return (
-        <Container maxWidth="md">
-            <h2 style={{fontFamily: "Righteous"}}>Your Posts</h2>
+        <Container maxWidth="md" sx={{border: 5, borderColor: "black", transform:"translate(0px, 30px)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed"}}>
+            <h2 style={{fontFamily: "Cabin Sketch", fontSize: 50}}>Your Posts</h2>
             <Grid container spacing={4}>
                 {title.map((title) => (
                     <Grid item key={title} xs={12} sm={12} md={12}>
