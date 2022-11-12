@@ -1,0 +1,33 @@
+.animation {
+    --s: 16px;  /* size of the frame */
+    --b: 3px;   /* border thickness */
+    --w: 50px; /* width of the image */
+    --c: #BF4D28;
+    
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: contain;
+    padding: var(--s);
+    --_g: #0000 25%,var(--c) 0;
+    background:
+      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 
+        var(--_p,-5%) var(--_p,-5%),
+      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 
+        calc(100% - var(--_p,-5%)) var(--_p,-5%),
+      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 
+        var(--_p,-5%) calc(100% - var(--_p,-5%)),
+      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 
+        calc(100% - var(--_p,-5%)) calc(100% - var(--_p,-5%));
+    background-size: 20% 20%; 
+    background-repeat: no-repeat;
+   
+    transition: .4s;
+    cursor: pointer;
+  }
+  .animation:hover {
+    outline-offset: 2px;
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    --_p: calc(var(--s)/4);
+    transition:  .3s, background-position .2s .2s;
+  }
+  
