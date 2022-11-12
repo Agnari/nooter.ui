@@ -33,7 +33,7 @@ export function Home(){
     <> 
         <main>
             <div >
-                <Container maxWidth="sm" style={{marginTop: '100px'}}>
+                <Container maxWidth="sm" style={{marginTop: '100px'}} sx={{border: 7, borderColor: "black", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px"}}>
                     <Typography variant="h2" align="center" color="textPrimary" gutterBottom>
                         Welcome Back
                     </Typography>

@@ -19,19 +19,20 @@ function App() {
         position="static"
         color="default"
         elevation={0}
-        sx={{ borderBottom: (theme) => `10px solid ${theme.palette.divider}`, backgroundColor: "#242323", borderColor: "#ce5704", borderBottomLeftRadius: 20, borderBottomRightRadius: 20, borderBottomStyle: "groove" }}
+        sx={{height: "62px", background: "#242323"}}
       >
 
         <Toolbar sx={{ flexWrap: 'wrap' }}>
-          <Link variant="h6" color="inherit" href="/" underline="hover" noWrap sx={{ flexGrow: 1, fontFamily: "Righteous", color: "white", fontSize: 27 }}>
-            NOOTER
+        <img src={require('./nootnoot.png')} alt="oops" style={{transform:"translate(70px) rotate(20deg)", height: '50px', width: '50px' }}/>
+          <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(70px)" }}> 
+            NOOTER 
           </Link>
 
-          <Button href="/newpost" variant="outlined" sx={{ my: 1, mx: 1.5, borderColor: "#A97637", color: "#A97637", borderRadius: 20, left: 30 }}>  New Post
-          </Button>
-          <Button href="/yourposts" variant="outlined" sx={{ my: 1, mx: 1.5, color: "#A97637", borderColor: "#A97637", borderRadius: 20, left: 30 }}> 
-          Your Posts
-          </Button>
+          <Link href="/newpost" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-500px)"}}>  Post
+          </Link>
+          <Link href="/yourposts" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-400px)"}}> 
+          Edit
+          </Link>
           <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20 }}>
             Login
           </Button>
