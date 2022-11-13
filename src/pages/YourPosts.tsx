@@ -8,6 +8,7 @@ import Container from '@mui/material/Container';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 export function YourPosts() {
     const [items, setItems] = useState([]);
@@ -38,7 +39,7 @@ export function YourPosts() {
                                     </p>
                                 </CardContent>
                                 <CardActions>
-                                    <Button href="/editpost" size="small" variant="contained" style={{ fontFamily: "Righteous", color: "black", backgroundColor: "#A97637", borderRadius: 20 }} sx={{ border: 0.7, borderColor: "darkgrey" }}>Edit</Button>
+                                    <Button component={Link} to={'/editpost/'+articles.id} size="small" variant="contained" style={{ fontFamily: "Righteous", color: "black", backgroundColor: "#A97637", borderRadius: 20 }} sx={{ border: 0.7, borderColor: "darkgrey" }}>Edit</Button>
                                 </CardActions>
                             </Stack>
                         </Card>

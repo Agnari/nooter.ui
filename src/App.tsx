@@ -44,7 +44,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
-        <Route path="/editpost" element={<EditPost />} />
+        <Route path="/editpost/:id" element={<EditPost />} />
         <Route path="/yourposts" element={<YourPosts />} />
       </Routes>
     </>
