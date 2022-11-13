@@ -1,4 +1,4 @@
-.animation {
+.animationshut {
     --s: 16px;  /* size of the frame */
     --b: 3px;   /* border thickness */
     --w: 50px; /* width of the image */
@@ -24,10 +24,79 @@
     transition: .4s;
     cursor: pointer;
   }
-  .animation:hover {
+  .animationshut:hover {
     outline-offset: 2px;
     clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
     --_p: calc(var(--s)/4);
     transition:  .3s, background-position .2s .2s;
   }
   
+.animationspin {
+  transition: transform .7s ease-in-out;
+}
+.animationspin:hover {
+  cursor: default;
+  transform: translate(1900px);
+  transition: transform 0.3s ease-in-out 0s;
+}
+
+.hover1 {
+  --c: #000000; /* the color */
+  --s: .10em;
+  
+  line-height:1.1em;
+  padding-bottom: calc(2.1*var(--s));
+  background: 
+    conic-gradient(from 135deg at top,var(--c) 90deg,#0000 0) 
+      left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+    conic-gradient(from -45deg at bottom,var(--c) 90deg,#0000 0) 
+      left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0) 0/var(--_p,0%) padding-box no-repeat;
+  transition: .5s;
+}
+.hover1:hover {
+  --_p: 100%;
+  color: var(--c);
+}
+
+.hover-2 {
+  --c: #A97637; /* the color */
+  --b: .05em;    /* border length*/
+  --d: 10px;    /* the cube depth */
+  
+  --_s: calc(var(--d) + var(--b));
+  
+  color: var(--c);
+  border: solid #0000;
+  border-width: var(--b) var(--b) var(--_s) var(--_s);
+  background:
+    conic-gradient(at left var(--d)  bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+    conic-gradient(at left var(--_s) bottom var(--_s),
+      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
+  transform: translate(calc(var(--d)/-1),var(--d));
+  clip-path: 
+    polygon(
+     var(--d) 0%, 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)),
+     100% calc(100% - var(--d)),
+     var(--d) calc(100% - var(--d))
+    );
+  transition: 0.5s;
+}
+.hover-2:hover {
+  transform: translate(0,0);
+  clip-path: 
+    polygon(
+     0% var(--d), 
+     var(--d) 0%, 
+     100% 0%, 
+     100% calc(100% - var(--d)), 
+     calc(100% - var(--d)) 100%, 
+     0% 100%
+   );
+}

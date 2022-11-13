@@ -28,9 +28,9 @@ function App() {
           <img src={require('./nootnoot.png')} alt="oops" style={{transform:"translate(0px, 15px) rotate(20deg)", height: '50px', width: '50px' }}/>NOOTER 
           </Link>
 
-          <Link className="animation" href="/newpost" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-500px, 10px)"}}>  Post
+          <Link className="animationshut" href="/newpost" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-500px, 10px)"}}>  Post
           </Link>
-          <Link className="animation" href="/yourposts" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-400px, 10px)"}}> 
+          <Link className="animationshut" href="/yourposts" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-400px, 10px)"}}> 
           Edit
           </Link>
           <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)" }}>

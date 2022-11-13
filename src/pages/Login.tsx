@@ -21,7 +21,7 @@ export function Login() {
                 }}
             >
                 <Box component="form" noValidate sx={{ mt: 1, width: '150%' }}>
-                    <TextField sx={{borderColor: "black", border: 1, borderRadius: 1, borderStyle:'groove'}}
+                    <TextField
                         margin="normal"
                         required
                         fullWidth
@@ -33,7 +33,7 @@ export function Login() {
                         inputProps={{style:{fontFamily: "Righteous"}}}
                         InputLabelProps={{style:{fontFamily: "Cabin Sketch", color: "black"}}}
                     />
-                    <TextField sx={{borderColor: "black", border: 1, borderRadius: 1, borderStyle:'groove'}}
+                    <TextField 
                         margin="normal"
                         required
                         fullWidth
