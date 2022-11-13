@@ -31,6 +31,7 @@ export function YourPosts() {
                                     <p className="hover1" style={{fontFamily: "Cabin Sketch", fontSize: 35, color: "#181818", width: 100 }}>
                                         {title}
                                     </p>
+                                    
                                 </CardContent>
                                 <CardActions>
                                     <Link className="hover-2" href="/editpost" underline="none" style={{ fontFamily: "Cabin Sketch", fontSize:20, color: "black", backgroundColor: "transparent", padding:"20px 20px 20px"}}> Edit</Link>
