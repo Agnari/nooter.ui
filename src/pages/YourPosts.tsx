@@ -29,7 +29,7 @@ export function YourPosts() {
                 {items.map((articles:any) => (
                     <Grid item key={articles.title} xs={12} sm={12} md={12}>
                         <Card
-                            sx={{ height: '87%', display: 'flex', flexDirection: 'column', borderRadius: 3, background: "linear-gradient(80deg, darkgray, gray)", borderBottom: (theme) => `8px solid ${theme.palette.divider}`, borderStyle: "solid", borderColor: "#A97637" }}
+                            sx={{ height: '87%', display: 'flex', flexDirection: 'column', borderRadius: 3, borderBottom: (theme) => `8px solid ${theme.palette.divider}`, borderStyle: "solid", borderColor: "#A97637" }}
                         >
                             <Stack direction="row">
                                 <CardContent sx={{ flexGrow: 1 }}>
