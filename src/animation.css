@@ -32,11 +32,13 @@
   }
   
 .animationspin {
+  transform-origin: center;
   transition: transform .7s ease-in-out;
 }
 .animationspin:hover {
+  transform-origin: center;
   cursor: default;
-  transform: translate(1900px);
+  transform: rotate(360deg);
   transition: transform 0.3s ease-in-out 0s;
 }
 
@@ -101,6 +103,6 @@
    );
 }
 
-.button:hover {
-background-color: transparent;
+CheckCircleOutlineIcon {
+  transform: rotate(2deg) translate(-20px);
 }
