@@ -8,10 +8,11 @@ import Container from '@mui/material/Container';
 
 export function Login() {
     return (
-    <Container sx={{transform:"translate(0px, 100px)"}}>
-    <Container style={{background: "url(https://img.freepik.com/free-photo/vintage-crumpled-paper-textured_53876-96063.jpg?t=st=1668288152~exp=1668288752~hmac=4b7bab87ab2d6a0477777fd2584b043def4808c24a8e1eb81573ca3b5b83b122)"}} sx={{width:'60%', border: 7, borderColor: "#2e2d2d", borderStyle:"dashed", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"drop-shadow(6px 6px 6px black)"}}>
+<Container style={{background: "linear-gradient(to left, #A97637, #60759c)", borderRadius: 40}} sx={{width: '40%'}}>
+        <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}} >
        
-        <Container maxWidth="xs">
+        <Container component="main" maxWidth="xs" >
+            <CssBaseline />
             <Box
                 sx={{
                     marginTop: 8,
@@ -20,7 +21,7 @@ export function Login() {
                     alignItems: 'center',
                 }}
             >
-                <Box component="form" noValidate sx={{ mt: 1, width: '150%' }}>
+                <Box component="form" noValidate sx={{ mt: 1 }}>
                     <TextField
                         margin="normal"
                         required
@@ -31,9 +32,9 @@ export function Login() {
                         autoComplete="email"
                         autoFocus
                         inputProps={{style:{fontFamily: "Righteous"}}}
-                        InputLabelProps={{style:{fontFamily: "Cabin Sketch", color: "black"}}}
+                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
                     />
-                    <TextField 
+                    <TextField
                         margin="normal"
                         required
                         fullWidth
@@ -43,20 +44,20 @@ export function Login() {
                         id="password"
                         autoComplete="current-password"
                         inputProps={{style:{fontFamily: "Righteous"}}}
-                        InputLabelProps={{style:{fontFamily: "Cabin Sketch", color: "black"}}}
+                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
                     />
                     <Button
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{ mt: 3, mb: 2, backgroundColor: "#59260B", border: 2, borderStyle:'groove', borderColor:'#2b1204', fontFamily: "Cabin Sketch", color: "white", fontSize: 20 }}
+                        sx={{ mt: 3, mb: 2, backgroundColor: "#A97637", borderRadius: 10, fontFamily: "Righteous" }}
                     >
                         Sign In
                     </Button>
                     <Grid container>
                         <Grid item xs></Grid>
                         <Grid item style={{paddingBottom: 20}}>
-                            <Link href="/register" variant="body2" underline="always" style={{color: "darkred", fontFamily: "Righteous", filter:"drop-shadow(1px 1px 1px black)"}}>
+                            <Link href="/register" variant="body2" style={{color: "black", fontFamily: "Righteous" }}>
                                 {"Don't have an account? Sign Up"}
                             </Link>
                         </Grid>
