@@ -5,6 +5,7 @@ import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
+import '../animation.css';
 
 export function Login() {
     return (
@@ -53,12 +54,15 @@ export function Login() {
                     >
                         Sign In
                     </Button>
+
                     <Grid container>
                         <Grid item xs></Grid>
                         <Grid item style={{paddingBottom: 20}}>
-                            <Link href="/register" variant="body2" underline="always" style={{color: "darkred", fontFamily: "Righteous", filter:"drop-shadow(1px 1px 1px black)"}}>
-                                {"Don't have an account? Sign Up"}
+                            <Link className="doit" href="/register" variant="body2" underline="always" style={{color: "darkred", fontFamily: "Righteous", filter:"drop-shadow(1px 1px 1px black)"}}>
+                                   <img className="shake" src={require("../uralreadydead.png")} alt="register... or die." style={{transform:"scaleX(-1)", width:50, height:50}}/>
+
                             </Link>
+                            
                         </Grid>
                     </Grid>
                 </Box>
