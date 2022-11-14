@@ -38,7 +38,7 @@
 .animationspin:hover {
   transform-origin: center;
   cursor: default;
-  transform: rotate(360deg);
+  transform: translate(1000px);
   transition: transform 0.3s ease-in-out 0s;
 }
 
@@ -105,4 +105,15 @@
 
 CheckCircleOutlineIcon {
   transform: rotate(2deg) translate(-20px);
+}
+
+.hewalkin {
+  width:50px;
+  height:50px;
+  transform: translate(10px);
+  
+}
+.hewalkin:hover {
+  transform: translate(-1000px);
+  transition: transform 30s ease-in-out;
 }

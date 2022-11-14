@@ -14,6 +14,9 @@ import Toolbar from '@mui/material/Toolbar';
 import Link from '@mui/material/Link';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+
 
 function App() {
   return (
@@ -33,14 +36,17 @@ function App() {
 
           <PostAddIcon sx={{color:"white", transform:"translate(-417px, -2px)"}}/>
           <DynamicFeedIcon sx={{color:"white", transform:"translate(-230px, 0px)"}}/>
-          <Link className="animationshut" href="/newpost" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-450px, 10px)"}}>  Post
+          <Link className="animationshut" href="/newpost" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-450px, 10px)"}}> Noot
           </Link>
           <Link className="animationshut" href="/yourposts" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-320px, 10px)"}}> 
-          Edit
+          Stuff
           </Link>
           <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)" }}>
             Login
           </Button>
+          
+          <img className="hewalkin" src={require("./goose-running-goose.gif")} />
+
         </Toolbar>
       </AppBar>
       

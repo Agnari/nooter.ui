@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import '../animation.css';
 import { Container } from "@mui/system";
 import TextField from '@mui/material/TextField'
 import Button from "@mui/material/Button";
@@ -66,6 +67,7 @@ export function NewPost() {
 
     return (
         <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0px, 90px)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed", filter:"drop-shadow(5px 5px 5px black)", height:"80vh"}}>
+
         <img src={require("../fuqno.png")} style={{height:'100px', width:'100px', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-60px, -35px) rotate(45deg)"}}/> <img src={require("../anber.png")} style={{height:100, width:100, filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(900px, -45px) rotate(-10deg)"}}/>
         <Container maxWidth="md" sx={{ transform:"translate(0px, -100px)"}}>
 
