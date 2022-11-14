@@ -44,8 +44,9 @@ function App() {
           <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)" }}>
             Login
           </Button>
+          <img className="hewalkin" src={require("./goose-running-goose.gif")}/>
           
-          <img className="hewalkin" src={require("./goose-running-goose.gif")} />
+          
 
         </Toolbar>
       </AppBar>
