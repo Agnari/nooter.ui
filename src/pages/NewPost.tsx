@@ -91,13 +91,13 @@ export function NewPost() {
                 required
                 fullWidth
                 id="title"
-                placeholder="Post Title"
+                placeholder="Give your post a title!"
                 name = 'title'
                 inputProps={{style:{fontFamily: "Righteous", textAlign:"center"}}}
 
             />
             <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-1deg)", filter:"drop-shadow(-1px 1px 1px black)"}}
-                placeholder="Write something!"
+                placeholder="Write something here..."
                 id="body"
                 name = 'body'
                 multiline

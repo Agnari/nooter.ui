@@ -110,24 +110,23 @@ height: 20px;
 100% { transform: translate(calc(10px), 20px) scaleX(-1) }
 }
 
-
+.shake {
+  transform: translate(10000px, 10000px);
+}
 .doit:after       { content:"Don't have an account? Sign up!"; width: 30px; }
 .doit:hover:after { 
-  animation: shake 0.5;
+  animation: shake 0.5s;
   animation-iteration-count: infinite;
-
-  content:'DO IT'; width: 30px;
+   content:'DO IT NOW.'; width: 30px;
 }
 
-.DOIT:hover {
-  animation: expand 20s ease-in-out infinite;
+.ducktrigger {
+  height:50px;
+  width:50px;
+  transform:scaleX(-1) rotate(6deg);
+  filter:drop-shadow(1px 1px 1px black);
 }
-@keyframes expand {
-0% { width:50px; height:50px }
-100% { width:1500px; height:1500px }
-}
-
-.shake:hover {
+.ducktrigger:hover {
   
   animation: shake 0.5s;
   animation-iteration-count: infinite;
@@ -150,6 +149,10 @@ height: 20px;
 .redpin {
   width:69px;
   height:54px;  
+}
+.bluepin {
+  width:120px;
+  height:80px;
 }
 
 .stickerM {

@@ -33,7 +33,7 @@ export function Register() {
     }
 
     return (
-        <Container style={{background: "url(https://img.freepik.com/free-photo/vintage-crumpled-paper-textured_53876-96063.jpg?t=st=1668288152~exp=1668288752~hmac=4b7bab87ab2d6a0477777fd2584b043def4808c24a8e1eb81573ca3b5b83b122)", backgroundSize:"cover"}} sx={{width:"60%", transform:"translate(0px, 100px) rotate(-2deg)", border: 7, borderColor: "#2e2d2d", borderStyle:"dashed", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"drop-shadow(6px 6px 6px black)"}}>
+        <Container style={{background: "url(https://img.freepik.com/free-photo/vintage-crumpled-paper-textured_53876-96063.jpg?t=st=1668288152~exp=1668288752~hmac=4b7bab87ab2d6a0477777fd2584b043def4808c24a8e1eb81573ca3b5b83b122)", backgroundSize:"cover"}} sx={{width:"100vh", transform:"translate(0px, 100px) rotate(-2deg)", border: 7, borderColor: "#2e2d2d", borderStyle:"dashed", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"drop-shadow(6px 6px 6px black)"}}>
         <Container component="main" maxWidth="xs">
             <Box
                 sx={{
@@ -43,13 +43,14 @@ export function Register() {
                     alignItems: 'center',
                 }}
             >
-                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, width:"80vh" }}>
                     <TextField 
+                        variant="standard"
                         margin="normal"
                         required
                         fullWidth
                         id="username"
-                        label="Username"
+                        label="Give yourself a nickname :)"
                         name="username"
                         autoComplete="username"
                         inputProps={{style:{fontFamily: "Righteous"}}}
@@ -57,22 +58,24 @@ export function Register() {
                         
                     />
                     <TextField 
+                        variant="standard"
                         margin="normal"
                         required
                         fullWidth
                         id="email"
-                        label="Email Address"
+                        label="Your mail adress...?"
                         name="email"
                         autoComplete="email"
                         inputProps={{style:{fontFamily: "Righteous"}}}
                         InputLabelProps={{style:{fontFamily: "Cabin Sketch"}}}
                     />
                     <TextField
+                        variant="standard"
                         margin="normal"
                         required
                         fullWidth
                         name="password"
-                        label="Password"
+                        label="Passcode"
                         type="password"
                         id="password"
                         autoComplete="new-password"
@@ -90,8 +93,8 @@ export function Register() {
                         Sign Up
                     </Button>
                     <Grid container justifyContent="flex-end">
-                        <img className="redpin" src={require("../pin.png")} style={{transform: "translate(460px, -400px) rotate(20deg)"}} alt="pin" />
-                        <img className="redpin" src={require("../pin.png")} style={{transform: "translate(-280px, -400px)"}} alt="pin" />
+                        <img className="redpin" src={require("../pin.png")} style={{transform: "translate(360px, -400px) rotate(20deg)"}} alt="pin" />
+                        <img className="redpin" src={require("../pin.png")} style={{transform: "translate(-290px, -400px)"}} alt="pin" />
                         <Grid item style={{paddingBottom: 20}}>
                             <Link href="/login" variant="body2" underline="always" style={{fontFamily: "Righteous", color: "darkred"}}>
                                 Already have an account? Sign in
