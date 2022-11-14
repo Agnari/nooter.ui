@@ -28,7 +28,7 @@ function App() {
         sx={{height: "62px", background: "#242323"}}
       >
 
-        <Toolbar sx={{ flexWrap: 'wrap', transform: "translate(0px, -10px)" }}>
+        <Toolbar sx={{ flexWrap: 'wrap', transform: "translate(0px, -10px)", borderBottom: (theme) => `6px solid ${theme.palette.divider}`, borderBottomColor:"#f7b500", borderBottomStyle:"dashed" }}>
 
           <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(70px, -9px)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}> 
           <img src={require('./nootnoot.png')} alt="oops" style={{transform:"translate(0px, 15px) rotate(20deg)", height: '50px', width: '50px' }}/>NOOTER 
