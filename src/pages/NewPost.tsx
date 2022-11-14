@@ -65,24 +65,25 @@ export function NewPost() {
 }
 
     return (
-        <Container style={{background: "linear-gradient(to left, #A97637, #545454)", borderRadius: 40}} sx={{width: '83%'}}>
-        <Container style={{background: "linear-gradient(45deg, white, #a8a7a7", borderRadius: 20}}>
-        
-        <Container maxWidth="md">
+        <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0px, 90px)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed", filter:"drop-shadow(5px 5px 5px black)", height:"100vh"}}>
+        <img src={require("../fuqno.png")} style={{height:'100px', width:'100px', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-60px, -35px) rotate(45deg)"}}/> <img src={require("../anber.png")} style={{height:100, width:100, filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(900px, -45px) rotate(-10deg)"}}/>
+        <Container maxWidth="md" sx={{ transform:"translate(0px, -100px)"}}>
 
-            <h2 style={{fontFamily: "Righteous", paddingTop: 20, fontSize: 30 }}>Add post</h2>
-            <CssBaseline />
-            <Box     >
+        <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Add post </h2>
+    
+            <Box>
             <Box
                 sx={{
                     marginTop: 8,
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
+                    transform:"translate(0px, -80px)"
                 }}
             >
             <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-            <TextField
+       
+            <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-0.4deg)", filter:"drop-shadow(-1px 1px 1px black)"}}
                 margin="normal"
                 variant="standard"
                 required
@@ -90,19 +91,17 @@ export function NewPost() {
                 id="title"
                 placeholder="Post Title"
                 name = 'title'
-                inputProps={{style:{fontFamily: "Righteous"}}}
-                InputLabelProps={{style:{fontFamily: "Righteous"}}}
+                inputProps={{style:{fontFamily: "Righteous", textAlign:"center"}}}
 
             />
-            <TextField
-                placeholder="Your text"
+            <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-1deg)", filter:"drop-shadow(-1px 1px 1px black)"}}
+                placeholder="Write something!"
                 id="body"
                 name = 'body'
                 multiline
                 fullWidth
                 rows={12}
-                inputProps={{style:{fontFamily: "Righteous"}}}
-                InputLabelProps={{style:{fontFamily: "Righteous"}}}
+                inputProps={{style:{fontFamily: "Righteous", padding:100, width: 700, height:100, textAlign:"center"}}}
             />
             <Grid container>
                 <Grid item xs></Grid>
@@ -111,7 +110,7 @@ export function NewPost() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{ mt: 3, mb: 2, fontFamily: "Righteous", backgroundColor: "#A97637", borderRadius: 3 }}
+                        sx={{mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(1deg)"}}
                     >
                         Submit
                     </Button>
@@ -120,7 +119,6 @@ export function NewPost() {
             </Box>
             </Box>
             </Box>
-        </Container>
         </Container>
         </Container>
     )
