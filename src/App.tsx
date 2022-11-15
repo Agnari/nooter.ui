@@ -1,5 +1,5 @@
 import './App.css';
-import './animation.css';
+import './styles.css';
 import { Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
@@ -28,10 +28,10 @@ function App() {
         sx={{height: "62px", background: "#242323"}}
       >
 
-        <Toolbar sx={{ flexWrap: 'wrap', transform:"translate(0vh, -1vh)", borderBottomColor:"#f7b500", borderBottomStyle:"dashed" }}>
+        <Toolbar sx={{ flexWrap: 'wrap', transform:"translate(0vh, -1vh)", borderBottomColor:"#f7b500", borderBottomStyle:"double" }}>
 
           <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -2vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}> 
-          <img src={require('./nootnoot.png')} alt="oops" style={{transform:"translate(0vw, 2.5vh) rotate(20deg)", height: '50px', width: '50px' }}/>NOOTER 
+          <img className="stickerM" src={require('./nootnoot.png')} alt="oops"/>NOOTER 
           </Link>
 
           <PostAddIcon sx={{color:"white", transform:"translate(-33vw, -0.5vh)"}}/>

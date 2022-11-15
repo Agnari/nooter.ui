@@ -156,19 +156,38 @@ height: 20px;
 }
 
 .stickerM {
-  height: 70px;
-  width: 70px;
+  height:50px;
+  width:50px;
+  transform:translate(0vw, 2.5vh) rotate(20deg);
   filter: drop-shadow(1px 1px 1px black);
-  transform: translate(360px, -100px) rotate(-40deg);
 }
 .stickerM:hover {
-animation: spin 0.3s;
+animation: spin 0.4s;
 animation-iteration-count: infinite;
 }
 @keyframes spin {
-0% { transform: translate(360px, -100px) rotate(0deg) }
-25% { transform: translate(360px, -100px) rotate(360deg) }
-50% { transform: translate(360px, -100px) rotate(720deg) }
-75% { transform: translate(360px, -100px) rotate(1080deg) }
-100% { transform: translate(360px, -100px) rotate(1460deg) }
+0% { transform: translate(0vw, 2.5vh) rotate(0deg) }
+25% { transform: translate(0vw, 2.5vh) rotate(360deg) }
+50% { transform: translate(0vw, 2.5vh) rotate(720deg) }
+75% { transform: translate(0vw, 2.5vh) rotate(1080deg) }
+100% { transform: translate(0vw, 2.5vh) rotate(1460deg) }
 }
+ .redlink {
+  color: darkred;
+  font-family:"Righteous";
+  filter:drop-shadow(1px 1px 1px black);
+ }
+
+ .kill {
+  height: 10.309278350515465vh;
+  width: 5.555555555555555vw;
+  transform:translate(47vw, -58vh) rotate(-20deg);
+  filter:drop-shadow(1px 1px 1px black) invert(10%);
+ }
+ 
+ .stamp {
+  width:20vh;
+  transform:translate(50vw, -55vh) rotate(-1deg);
+  filter:drop-shadow(0.5px 0.5px 0.5px black) invert(10%);
+ }
+ 

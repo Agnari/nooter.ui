@@ -1,5 +1,5 @@
 import Box from "@mui/material/Box";
-import '../animation.css';
+import '../styles.css';
 import { Container } from "@mui/system";
 import TextField from '@mui/material/TextField'
 import Button from "@mui/material/Button";

@@ -96,8 +96,8 @@ export function Register() {
                         <img className="redpin" src={require("../pin.png")} style={{transform: "translate(28.571428571428573vw, -58.910162002945505vh) rotate(20deg)"}} alt="pin" />
                         <img className="redpin" src={require("../pin.png")} style={{transform: "translate(-23.015873015873016vw, -58.910162002945505vh)"}} alt="pin" />
                         <Grid item style={{paddingBottom: 20}}>
-                            <Link href="/login" variant="body2" underline="always" style={{fontFamily: "Righteous", color: "darkred"}}>
-                                Already have an account? Sign in
+                            <Link href="/login" variant="body2" underline="always" style={{fontFamily:"Righteous", color:"darkred", filter:"drop-shadow(1px 1px 1px black)"}}>
+                                Already have an account? Sign in!
                             </Link>
                         </Grid>
                     </Grid>
