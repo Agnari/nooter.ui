@@ -121,8 +121,8 @@ height: 20px;
 }
 
 .ducktrigger {
-  height:50px;
-  width:50px;
+  height:7.363770250368188vh;
+  width:3.9682539682539684vw;
   transform:scaleX(-1) rotate(6deg);
   filter:drop-shadow(1px 1px 1px black);
 }
