@@ -104,10 +104,10 @@ width: 20px;
 height: 20px;
 }
 @keyframes  slide {
-0% { transform: translate(10px, 20px) scaleX(1) }
-49% { transform: translate(calc(-250px * 4.5), 20px) scaleX(1) } 
-50% { transform: translate(calc(-250px * 4.5), 20px) scaleX(-1) } 
-100% { transform: translate(calc(10px), 20px) scaleX(-1) }
+0% { transform: translate(0.7936507936507936vw, 2.9455081001472756vh) scaleX(1) }
+49% { transform: translate(-95vw, 2.9455081001472756vh) scaleX(1) } 
+50% { transform: translate(-95vw, 2.9455081001472756vh) scaleX(-1) } 
+100% { transform: translate(0.7936507936507936vw, 2.9455081001472756vh) scaleX(-1) }
 }
 
 .shake {
