@@ -66,10 +66,10 @@ export function NewPost() {
 }
 
     return (
-        <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0px, 90px)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "double", filter:"drop-shadow(5px 5px 5px black)", height:"81vh"}}>
+        <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0vw, 13.25478645066274vh)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "double", filter:"drop-shadow(5px 5px 5px black)", height:"81vh"}}>
 
-        <img src={require("../fuqno.png")} style={{height:'100px', width:'100px', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-60px, -35px) rotate(45deg)"}}/> <img src={require("../anber.png")} style={{height:100, width:100, filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(900px, -45px) rotate(-10deg)"}}/> 
-        <Container maxWidth="md" sx={{ transform:"translate(0px, -100px)"}}>
+        <img src={require("../fuqno.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)"}}/> <img src={require("../anber.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(71.42857142857143vw, -6.62739322533137vh) rotate(-10deg)"}}/> 
+        <Container maxWidth="md" sx={{ transform:"translate(0vw, -14.727540500736376vh)" }}>
 
         <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Add post </h2>
     
@@ -103,7 +103,7 @@ export function NewPost() {
                 multiline
                 fullWidth
                 rows={12}
-                inputProps={{style:{fontFamily: "Righteous", padding:100, width: 700, height:100, textAlign:"center"}}}
+                inputProps={{style:{fontFamily: "Righteous", padding:'14.727540500736376vh', width: '55.55555555555556vw', height:'14.727540500736376vh', textAlign:"center"}}}
             />
             <Grid container>
                 <Grid item xs></Grid>
@@ -112,7 +112,7 @@ export function NewPost() {
                         type="submit"
                         fullWidth
                         variant="contained"
-                        sx={{mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(1deg)", bottom: 20}}
+                        sx={{mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(1deg)"}}
                     >
                         Submit
                     </Button>
