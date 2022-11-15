@@ -9,7 +9,7 @@ import '../animation.css';
 
 export function Login() {
     return (
-    <Container sx={{transform:"translate(0px, 100px)"}}>
+    <Container sx={{transform:"translate(0vw, 14.727540500736376vh)"}}>
 
     <Container style={{background: "url(https://img.freepik.com/free-photo/vintage-crumpled-paper-textured_53876-96063.jpg?t=st=1668288152~exp=1668288752~hmac=4b7bab87ab2d6a0477777fd2584b043def4808c24a8e1eb81573ca3b5b83b122)"}} sx={{transform:"rotate(3deg)",width:'60%', height:"60vh", border: 7, borderColor: "#2e2d2d", borderStyle:"dashed", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"drop-shadow(6px 6px 6px black)"}}>
 
@@ -66,8 +66,8 @@ export function Login() {
                             
                         </Grid>
                     </Grid>
-                    <img className="redpin" src={require("../pin.png")} style={{transform: "translate(-70px, -420px) rotate(180deg)" }} alt="pin" />
-                    <img className="bluepin" src={require("../bpin.png")} style={{transform: "translate(500px, -447px) rotate(20deg)" }} alt="pin" />
+                    <img className="redpin" src={require("../pin.png")} style={{transform: "translate(-5.555555555555555vw, -61.855670103092784vh) rotate(180deg)" }} alt="pin" />
+                    <img className="bluepin" src={require("../bpin.png")} style={{transform: "translate(39.682539682539684vw, -65.8321060382916vh) rotate(20deg)" }} alt="pin" />
 
                 </Box>
             </Box>
