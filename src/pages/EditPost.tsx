@@ -48,9 +48,9 @@ export function EditPost() {
     return (
 
         <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0vw, 13.25478645066274vh)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed", filter:"drop-shadow(5px 5px 5px black)"}}>
-         <img src={require("../stickers/fuqno.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)"}}/> 
-         <img src={require("../stickers/anber.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(71.42857142857143vw, -6.62739322533137vh) rotate(-10deg)"}}/>
-                <Container component="form" noValidate onSubmit={handleSubmit} maxWidth="md" sx={{ transform:"translate(0vw, -14.727540500736376vh)", marginBottom:-10}}>
+        <img src={require("../stickers/fuqno.png")} style={{height:'7.936507936507937vw', width:'7.936507936507937vw', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)"}}/> 
+        <img src={require("../stickers/anber.png")} style={{height:'7.936507936507937vw', width:'7.936507936507937vw', filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(70vw, -5vh) rotate(-45deg)"}}/> 
+                <Container component="form" noValidate onSubmit={handleSubmit} maxWidth="md" sx={{ transform:"translate(0vw, -14.727540500736376vh)", marginBottom:-10, width:"70vw"}}>
                 <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}>Edit Post</h2>
 
                     <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-1deg)"}}

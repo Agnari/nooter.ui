@@ -113,15 +113,20 @@ height: 20px;
 .shake {
   transform: translate(10000px, 10000px);
 }
-.doit:after       { content:"Don't have an account? Sign up!"; width: 30px; }
+.doit {
+  margin-bottom:20vh;
+}
+.doit:after       { 
+  content:"Don't have an account? Sign up!"; width: 30px;
+}
 .doit:hover:after { 
   animation: shake 0.5s;
   animation-iteration-count: infinite;
-   content:'DO IT NOW.'; width: 30px;
+  content:'DO IT NOW.'; width: 30px;
 }
 
 .ducktrigger {
-  height:7.363770250368188vh;
+  height:3.9682539682539684vw;
   width:3.9682539682539684vw;
   transform:scaleX(-1) rotate(6deg);
   filter:drop-shadow(1px 1px 1px black);
@@ -147,12 +152,12 @@ height: 20px;
 }
 
 .redpin {
-  width:69px;
-  height:54px;  
+  width:5.979202772963605vw;
+  height:4.679376083188908vw;  
 }
 .bluepin {
-  width:120px;
-  height:80px;
+  width:10.398613518197573vw;
+  height:6.932409012131716vw;
 }
 
 .stickerM {
@@ -179,14 +184,14 @@ animation-iteration-count: infinite;
  }
 
  .kill {
-  height: 10.309278350515465vh;
-  width: 5.555555555555555vw;
+  height: 5.6vw;
+  width: 5.6vw;
   transform:translate(47vw, -58vh) rotate(-20deg);
   filter:drop-shadow(1px 1px 1px black) invert(10%);
  }
  
  .stamp {
-  width:20vh;
+  width:10vw;
   transform:translate(50vw, -55vh) rotate(-1deg);
   filter:drop-shadow(0.5px 0.5px 0.5px black) invert(10%);
  }
