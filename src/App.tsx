@@ -28,7 +28,7 @@ function App() {
         sx={{height: "62px", background: "#242323"}}
       >
 
-        <Toolbar sx={{ flexWrap: 'wrap', transform:"translate(0vh, -1vh)", borderBottomColor:"#f7b500", borderBottomStyle:"double" }}>
+        <Toolbar sx={{ flexWrap: 'wrap', transform:"translate(0vh, -1vh)", borderBottomColor:"#f7b500", borderBottomStyle:"dashed" }}>
 
           <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -2vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}> 
           <img className="stickerM" src={require('./stickers/nootnoot.png')} alt="oops"/>NOOTER 
