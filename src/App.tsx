@@ -31,7 +31,7 @@ function App() {
         <Toolbar sx={{ flexWrap: 'wrap', transform:"translate(0vh, -1vh)", borderBottomColor:"#f7b500", borderBottomStyle:"double" }}>
 
           <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -2vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}> 
-          <img className="stickerM" src={require('./nootnoot.png')} alt="oops"/>NOOTER 
+          <img className="stickerM" src={require('./stickers/nootnoot.png')} alt="oops"/>NOOTER 
           </Link>
 
           <PostAddIcon sx={{color:"white", transform:"translate(-33vw, -0.5vh)"}}/>
@@ -44,7 +44,7 @@ function App() {
           <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform:"translate(0vw, -0.5vh)"}}>
             Login
           </Button>
-          <img className="hewalkin" src={require("./goose-running-goose.gif")}/>
+          <img className="hewalkin" src={require("./stickers/goose-running-goose.gif")}/>
           
           
 

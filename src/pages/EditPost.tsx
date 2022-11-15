@@ -48,7 +48,8 @@ export function EditPost() {
     return (
 
         <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0vw, 13.25478645066274vh)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed", filter:"drop-shadow(5px 5px 5px black)"}}>
-         <img src={require("../fuqno.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)"}}/> <img src={require("../anber.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(71.42857142857143vw, -6.62739322533137vh) rotate(-10deg)"}}/>
+         <img src={require("../stickers/fuqno.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)"}}/> 
+         <img src={require("../stickers/anber.png")} style={{height:'14.727540500736376vh', width:'7.936507936507937vw', filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(71.42857142857143vw, -6.62739322533137vh) rotate(-10deg)"}}/>
                 <Container component="form" noValidate onSubmit={handleSubmit} maxWidth="md" sx={{ transform:"translate(0vw, -14.727540500736376vh)", marginBottom:-10}}>
                 <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}>Edit Post</h2>
 

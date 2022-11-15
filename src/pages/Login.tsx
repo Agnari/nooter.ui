@@ -61,20 +61,20 @@ export function Login() {
                         <Grid item xs></Grid>
                         <Grid item style={{paddingBottom: 20}}>
                             <Link className="doit" href="/register" variant="body2" underline="always" style={{color:"darkred", fontFamily:"Righteous", filter:"drop-shadow(1px 1px 1px black)"}}>
-                                   <img className="ducktrigger" src={require("../uralreadydead.png")} alt="register... or die." />
+                                   <img className="ducktrigger" src={require("../stickers/uralreadydead.png")} alt="register... or die." />
                             </Link>
                             
                         </Grid>
                     </Grid>
-                    <img className="redpin" src={require("../pin.png")} style={{transform: "translate(-5.555555555555555vw, -61.855670103092784vh) rotate(180deg)" }} alt="pin" />
-                    <img className="bluepin" src={require("../bpin.png")} style={{transform: "translate(39.682539682539684vw, -65.8321060382916vh) rotate(20deg)" }} alt="pin" />
+                    <img className="redpin" src={require("../stickers/pin.png")} style={{transform: "translate(-5.555555555555555vw, -61.855670103092784vh) rotate(180deg)" }} alt="pin" />
+                    <img className="bluepin" src={require("../stickers/bpin.png")} style={{transform: "translate(39.682539682539684vw, -65.8321060382916vh) rotate(20deg)" }} alt="pin" />
 
                 </Box>
             </Box>
         </Container>
         </Container>
-        <img className="kill" src={require("../die.png")} alt="die"/>
-        <img className="stamp" src={require("../stamp.png")} alt="stamp"/>
+        <img className="kill" src={require("../stickers/die.png")} alt="die"/>
+        <img className="stamp" src={require("../stickers/stamp.png")} alt="stamp"/>
         </Container>
     );
 }
