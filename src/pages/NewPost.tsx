@@ -109,7 +109,7 @@ export function NewPost() {
                     <Button 
                         type="submit"
                         variant="contained"
-                        sx={{fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(2deg)", marginBottom:3, left:"65vw"}}>
+                        sx={{fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(2deg)", marginBottom:3, left:"65vw", maxWidth:"7vw", maxHeight:"5.9vh", minWidth:"7vw", minHeight:"6.5vh"}}>
                         Submit
                     </Button>
             

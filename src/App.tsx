@@ -12,8 +12,10 @@ import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import Link from '@mui/material/Link';
+import Box from '@mui/material/Box';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+
 
 
 
@@ -28,7 +30,6 @@ function App() {
       >
 
         <Toolbar sx={{ flexWrap: 'wrap', transform:"translate(0vh, -1vh)", borderBottomColor:"#f7b500", borderBottomStyle:"dashed" }}>
-
           <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -2vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}> 
           <img className="stickerM" src={require('./stickers/nootnoot.png')} alt="oops"/>NOOTER 
           </Link>
@@ -40,7 +41,7 @@ function App() {
           <Link className="animationshut" href="/yourposts" underline="none" sx={{fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-25.1vw, 1.5vh)"}}> 
           Stuff
           </Link>
-          <Button href="/login" variant="contained" sx={{ my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform:"translate(0vw, -0.5vh)"}}>
+          <Button href="/login" variant="contained" sx={{maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform:"translate(0vw, -0.5vh)"}}>
             Login
           </Button>
           <img className="hewalkin" src={require("./stickers/goose-running-goose.gif")}/>
