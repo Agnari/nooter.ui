@@ -32,11 +32,12 @@ export function Home(){
     return(
     <> 
         <main>
+         
             <Container maxWidth="xl">
                 <Grid container spacing={4}>
                     {items && items.map((article:any) => (
                         <Grid item key = {article.id} xs={12} sm={6} md={4} lg={3}>
-                        <Card>
+                        <Card className="articleCard">
                             <CardMedia
                              component="img"
                              height="194"

@@ -1,198 +1,265 @@
 .animationshut {
-    --s: 16px;  /* size of the frame */
-    --b: 3px;   /* border thickness */
-    --w: 50px; /* width of the image */
-    --c: #BF4D28;
-    
-    width: var(--w);
-    aspect-ratio: 1;
-    object-fit: contain;
-    padding: var(--s);
-    --_g: #0000 25%,var(--c) 0;
-    background:
-      conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 
-        var(--_p,-5%) var(--_p,-5%),
-      conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 
-        calc(100% - var(--_p,-5%)) var(--_p,-5%),
-      conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 
-        var(--_p,-5%) calc(100% - var(--_p,-5%)),
-      conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 
-        calc(100% - var(--_p,-5%)) calc(100% - var(--_p,-5%));
-    background-size: 20% 20%; 
-    background-repeat: no-repeat;
-   
-    transition: .4s;
-    cursor: pointer;
-  }
-  .animationshut:hover {
-    outline-offset: 2px;
-    clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-    --_p: calc(var(--s)/4);
-    transition:  .3s, background-position .2s .2s;
-  }
+  --s: 16px;
+  /* size of the frame */
+  --b: 3px;
+  /* border thickness */
+  --w: 50px;
+  /* width of the image */
+  --c: #BF4D28;
 
-  
+  width: var(--w);
+  aspect-ratio: 1;
+  object-fit: contain;
+  padding: var(--s);
+  --_g: #0000 25%, var(--c) 0;
+  background:
+    conic-gradient(from 90deg at top var(--b) left var(--b), var(--_g)) var(--_p, -5%) var(--_p, -5%),
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) calc(100% - var(--_p, -5%)) var(--_p, -5%),
+    conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) var(--_p, -5%) calc(100% - var(--_p, -5%)),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g)) calc(100% - var(--_p, -5%)) calc(100% - var(--_p, -5%));
+  background-size: 20% 20%;
+  background-repeat: no-repeat;
+
+  transition: .4s;
+  cursor: pointer;
+}
+
+.animationshut:hover {
+  outline-offset: 2px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  --_p: calc(var(--s)/4);
+  transition: .3s, background-position .2s .2s;
+}
+
+
 
 .hover1 {
-  --c: #000000; /* the color */
+  --c: #000000;
+  /* the color */
   --s: .10em;
-  
-  line-height:1.1em;
+
+  line-height: 1.1em;
   padding-bottom: calc(2.1*var(--s));
-  background: 
-    conic-gradient(from 135deg at top,var(--c) 90deg,#0000 0) 
-      left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
-    conic-gradient(from -45deg at bottom,var(--c) 90deg,#0000 0) 
-      left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
+  background:
+    conic-gradient(from 135deg at top, var(--c) 90deg, #0000 0) left 0 bottom var(--s)/calc(2*var(--s)) var(--s) repeat-x,
+    conic-gradient(from -45deg at bottom, var(--c) 90deg, #0000 0) left var(--s) bottom 0/calc(2*var(--s)) var(--s) repeat-x;
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
-    linear-gradient(#000 0 0) 0/var(--_p,0%) padding-box no-repeat;
+    linear-gradient(#000 0 0) 0/var(--_p, 0%) padding-box no-repeat;
   transition: .5s;
 }
+
 .hover1:hover {
   --_p: 100%;
   color: var(--c);
 }
 
 .hover-2 {
-  --c: #A97637; /* the color */
-  --b: .05em;    /* border length*/
-  --d: 10px;    /* the cube depth */
-  
+  --c: #A97637;
+  /* the color */
+  --b: .05em;
+  /* border length*/
+  --d: 10px;
+  /* the cube depth */
+
   --_s: calc(var(--d) + var(--b));
-  
+
   color: var(--c);
   border: solid #0000;
   border-width: var(--b) var(--b) var(--_s) var(--_s);
   background:
-    conic-gradient(at left var(--d)  bottom var(--d),
-      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg,rgb(255 255 255 /0.6) 0) border-box,
+    conic-gradient(at left var(--d) bottom var(--d),
+      #0000 90deg, rgb(255 255 255 /0.3) 0 225deg, rgb(255 255 255 /0.6) 0) border-box,
     conic-gradient(at left var(--_s) bottom var(--_s),
-      #0000 90deg,var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b))  border-box;
-  transform: translate(calc(var(--d)/-1),var(--d));
-  clip-path: 
-    polygon(
-     var(--d) 0%, 
-     var(--d) 0%, 
-     100% 0%, 
-     100% calc(100% - var(--d)),
-     100% calc(100% - var(--d)),
-     var(--d) calc(100% - var(--d))
-    );
+      #0000 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
+  transform: translate(calc(var(--d)/-1), var(--d));
+  clip-path:
+    polygon(var(--d) 0%,
+      var(--d) 0%,
+      100% 0%,
+      100% calc(100% - var(--d)),
+      100% calc(100% - var(--d)),
+      var(--d) calc(100% - var(--d)));
   transition: 0.5s;
 }
+
 .hover-2:hover {
-  transform: translate(0,0);
-  clip-path: 
-    polygon(
-     0% var(--d), 
-     var(--d) 0%, 
-     100% 0%, 
-     100% calc(100% - var(--d)), 
-     calc(100% - var(--d)) 100%, 
-     0% 100%
-   );
+  transform: translate(0, 0);
+  clip-path:
+    polygon(0% var(--d),
+      var(--d) 0%,
+      100% 0%,
+      100% calc(100% - var(--d)),
+      calc(100% - var(--d)) 100%,
+      0% 100%);
 }
 
 CheckCircleOutlineIcon {
   transform: rotate(2deg) translate(-20px);
 }
 
-.hewalkin  {
-animation: slide 20s linear infinite;
-width: 20px;
-height: 20px;
+.hewalkin {
+  animation: slide 20s linear infinite;
+  width: 20px;
+  height: 20px;
 }
-@keyframes  slide {
-0% { transform: translate(0.7936507936507936vw, 2.9455081001472756vh) scaleX(1) }
-49% { transform: translate(-95vw, 2.9455081001472756vh) scaleX(1) } 
-50% { transform: translate(-95vw, 2.9455081001472756vh) scaleX(-1) } 
-100% { transform: translate(0.7936507936507936vw, 2.9455081001472756vh) scaleX(-1) }
+
+@keyframes slide {
+  0% {
+    transform: translate(0.7936507936507936vw, 2.9455081001472756vh) scaleX(1)
+  }
+
+  49% {
+    transform: translate(-95vw, 2.9455081001472756vh) scaleX(1)
+  }
+
+  50% {
+    transform: translate(-95vw, 2.9455081001472756vh) scaleX(-1)
+  }
+
+  100% {
+    transform: translate(0.7936507936507936vw, 2.9455081001472756vh) scaleX(-1)
+  }
 }
 
 .shake {
   transform: translate(10000px, 10000px);
 }
+
 .doit {
-  margin-bottom:20vh;
+  margin-bottom: 20vh;
 }
-.doit:after       { 
-  content:"Don't have an account? Sign up!"; width: 30px;
+
+.doit:after {
+  content: "Don't have an account? Sign up!";
+  width: 30px;
 }
-.doit:hover:after { 
+
+.doit:hover:after {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
-  content:'DO IT NOW.'; width: 30px;
+  content: 'DO IT NOW.';
+  width: 30px;
 }
 
 .ducktrigger {
-  height:3.9682539682539684vw;
-  width:3.9682539682539684vw;
-  transform:scaleX(-1) rotate(6deg);
-  filter:drop-shadow(1px 1px 1px black);
+  height: 3.9682539682539684vw;
+  width: 3.9682539682539684vw;
+  transform: scaleX(-1) rotate(6deg);
+  filter: drop-shadow(1px 1px 1px black);
 }
+
 .ducktrigger:hover {
-  
+
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(1deg); }
-  10% { transform: translate(-2px, -3px) rotate(-2deg); }
-  20% { transform: translate(-4px, 0px) rotate(2deg); }
-  30% { transform: translate(4px, 1px) rotate(1deg); }
-  40% { transform: translate(2px, -2px) rotate(2deg); }
-  50% { transform: translate(-2px, 3px) rotate(-2deg); }
-  60% { transform: translate(-4px, 2px) rotate(1deg); }
-  70% { transform: translate(4px, 2px) rotate(-2deg); }
-  80% { transform: translate(-2px, -2px) rotate(2deg); }
-  90% { transform: translate(2px, 3px) rotate(1deg); }
-  100% { transform: translate(2px, -3px) rotate(-2deg); }
+  0% {
+    transform: translate(1px, 1px) rotate(1deg);
+  }
+
+  10% {
+    transform: translate(-2px, -3px) rotate(-2deg);
+  }
+
+  20% {
+    transform: translate(-4px, 0px) rotate(2deg);
+  }
+
+  30% {
+    transform: translate(4px, 1px) rotate(1deg);
+  }
+
+  40% {
+    transform: translate(2px, -2px) rotate(2deg);
+  }
+
+  50% {
+    transform: translate(-2px, 3px) rotate(-2deg);
+  }
+
+  60% {
+    transform: translate(-4px, 2px) rotate(1deg);
+  }
+
+  70% {
+    transform: translate(4px, 2px) rotate(-2deg);
+  }
+
+  80% {
+    transform: translate(-2px, -2px) rotate(2deg);
+  }
+
+  90% {
+    transform: translate(2px, 3px) rotate(1deg);
+  }
+
+  100% {
+    transform: translate(2px, -3px) rotate(-2deg);
+  }
 }
 
 .redpin {
-  width:5.979202772963605vw;
-  height:4.679376083188908vw;  
+  width: 5.979202772963605vw;
+  height: 4.679376083188908vw;
 }
+
 .bluepin {
-  width:10.398613518197573vw;
-  height:6.932409012131716vw;
+  width: 10.398613518197573vw;
+  height: 6.932409012131716vw;
 }
 
 .stickerM {
-  height:50px;
-  width:50px;
-  transform:translate(0vw, 2.5vh) rotate(20deg);
+  height: 50px;
+  width: 50px;
+  transform: translate(0vw, 2.5vh) rotate(20deg);
   filter: drop-shadow(1px 1px 1px black);
 }
-.stickerM:hover {
-animation: spin 0.4s;
-animation-iteration-count: infinite;
-}
-@keyframes spin {
-0% { transform: translate(0vw, 2.5vh) rotate(0deg) }
-25% { transform: translate(0vw, 2.5vh) rotate(360deg) }
-50% { transform: translate(0vw, 2.5vh) rotate(720deg) }
-75% { transform: translate(0vw, 2.5vh) rotate(1080deg) }
-100% { transform: translate(0vw, 2.5vh) rotate(1460deg) }
-}
- .redlink {
-  color: darkred;
-  font-family:"Righteous";
-  filter:drop-shadow(1px 1px 1px black);
- }
 
- .kill {
+.stickerM:hover {
+  animation: spin 0.4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(0vw, 2.5vh) rotate(0deg)
+  }
+
+  25% {
+    transform: translate(0vw, 2.5vh) rotate(360deg)
+  }
+
+  50% {
+    transform: translate(0vw, 2.5vh) rotate(720deg)
+  }
+
+  75% {
+    transform: translate(0vw, 2.5vh) rotate(1080deg)
+  }
+
+  100% {
+    transform: translate(0vw, 2.5vh) rotate(1460deg)
+  }
+}
+
+.redlink {
+  color: darkred;
+  font-family: "Righteous";
+  filter: drop-shadow(1px 1px 1px black);
+}
+
+.kill {
   height: 5.6vw;
   width: 5.6vw;
-  transform:translate(47vw, -58vh) rotate(-20deg);
-  filter:drop-shadow(1px 1px 1px black) invert(10%);
- }
- 
- .stamp {
-  width:10vw;
-  transform:translate(50vw, -55vh) rotate(-1deg);
-  filter:drop-shadow(0.5px 0.5px 0.5px black) invert(10%);
- }
- 
+  transform: translate(47vw, -58vh) rotate(-20deg);
+  filter: drop-shadow(1px 1px 1px black) invert(10%);
+}
+
+.stamp {
+  width: 10vw;
+  transform: translate(50vw, -55vh) rotate(-1deg);
+  filter: drop-shadow(0.5px 0.5px 0.5px black) invert(10%);
+}
