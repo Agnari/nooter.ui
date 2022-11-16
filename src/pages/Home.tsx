@@ -37,7 +37,7 @@ export function Home(){
                 <Grid container spacing={4}>
                     {items && items.map((article:any) => (
                         <Grid item key = {article.id} xs={12} sm={6} md={4} lg={3}>
-                        <Card className="articleCard" variant="outlined">
+                        <Card className="articleCard" variant="outlined" sx={{border:2, borderStyle:"double"}}>
                             <CardMedia
                              component="img"
                              height="194"
