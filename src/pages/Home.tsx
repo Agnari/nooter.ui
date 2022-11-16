@@ -1,6 +1,7 @@
 import { Typography, Card, CardActions, CardContent, CardMedia, Grid, Container, Button } from "@mui/material";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 export function Home(){
 
@@ -32,11 +33,12 @@ export function Home(){
     return(
     <> 
         <main>
+         
             <Container maxWidth="xl">
                 <Grid container spacing={4}>
                     {items && items.map((article:any) => (
                         <Grid item key = {article.id} xs={12} sm={6} md={4} lg={3}>
-                        <Card>
+                        <Card className="articleCard" variant="outlined" sx={{border:2, borderStyle:"double"}}>
                             <CardMedia
                              component="img"
                              height="194"
@@ -52,8 +54,8 @@ export function Home(){
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button variant="text" size="small" color="primary">
-                                    Read
+                                <Button component={Link} to={'/read/'+article.id} variant="text" size="small" color="primary">
+                                    Read more
                                 </Button>
                             </CardActions>
                         </Card>
@@ -66,4 +68,3 @@ export function Home(){
     );
   
 }
-

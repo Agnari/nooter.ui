@@ -8,6 +8,7 @@ import { PasswordReset } from './pages/PasswordReset';
 import { NewPost } from './pages/NewPost';
 import { EditPost } from './pages/EditPost';
 import { YourPosts } from './pages/YourPosts';
+import { ReadPage } from './pages/ReadPage';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
@@ -59,6 +60,7 @@ function App() {
         <Route path="/newpost" element={<NewPost />} />
         <Route path="/editpost/:id" element={<EditPost />} />
         <Route path="/yourposts" element={<YourPosts />} />
+        <Route path="/read/:id" element={<ReadPage />} />
       </Routes>
     </>
 
