@@ -10,8 +10,8 @@ import { useNavigate } from 'react-router-dom';
 export function EditPost() {
     let articles = useParams();
     const navigate = useNavigate();
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
+    const [title, setTitle] = useState(String);
+    const [body, setBody] = useState(String);
 
     useEffect(() => {
         fetch("https://localhost:7018/api/articles/" + articles.id)

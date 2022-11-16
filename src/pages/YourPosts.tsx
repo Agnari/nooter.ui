@@ -5,8 +5,6 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
-import * as React from 'react';
-import Box from '@mui/material/Box';
 import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
@@ -27,6 +25,11 @@ export function YourPosts() {
             )
     }, [])
 
+ const deletePost = (id: string) => {
+        fetch("https://localhost:7018/api/articles/" + id, { method: 'DELETE' })
+        setItems((items) => items.filter((article: any) => article.id !== id))
+    }
+    
     return (
         <Container maxWidth="md" sx={{ background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", border: 5, borderColor: "black", transform: "translate(0px, 30px)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed", paddingBottom: 15, filter: "drop-shadow(7px 7px 7px black)" }}>
             <h2 className="hover1" style={{ fontFamily: "Cabin Sketch", fontSize: 50, height: 44, width: 300 }}> <DoneOutlineIcon sx={{ color: "black", transform: "rotate(3deg)" }} />Your Posts
@@ -46,9 +49,10 @@ export function YourPosts() {
                                     </p>
                                 </CardContent>
                                 <CardActions>
-                                    <Button className="hover-2" component={Link} to={'/editpost/' + articles.id} size="small" variant="contained" style={{ fontFamily: "Cabin Sketch", fontSize: 20, color: "black", backgroundColor: "transparent", padding: "10px 20px 20px" }}>
-                                        Edit
-                                    </Button>
+
+                                    <Button className="hover-2" component={Link} to={'/editpost/' + articles.id} size="small" variant="contained" style={{ fontFamily: "Cabin Sketch", fontSize: 20, color: "black", backgroundColor: "transparent", padding: "10px 20px 20px" }}>Edit</Button>
+                                    <Button onClick={() => deletePost(articles.id)} size="small" variant="contained" style={{ fontFamily: "Righteous", color: "black", backgroundColor: "#A97637", borderRadius: 20 }} sx={{ border: 0.7, borderColor: "darkgrey" }}>Delete</Button>
+
                                 </CardActions>
                             </Stack>
                         </Card>
