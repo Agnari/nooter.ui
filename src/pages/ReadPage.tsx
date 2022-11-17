@@ -29,21 +29,21 @@ export function ReadPage(){
                 <Box sx={{ m: 10 }}>
                 <Container maxWidth="md">
 
-                            <Card>
+                            <Card sx={{paddingBottom:"5vw", borderRadius:3, border:5, borderStyle:"dashed"}}>
                                 <CardMedia
                                  component="img"
                                  height="400"
                                  image="https://source.unsplash.com/random"
                                  title="Image title"
                                 />
-                                <CardContent>
-                                    <Typography variant="h2" align ="center">
+                                <CardContent sx={{size:"fixed", marginLeft:5}}>
+                                    <Typography variant="h2" align ="center" sx={{overflowWrap:"break-word"}}>
                                         {title}
                                     </Typography>
                                     <Typography gutterBottom align ="center">
                                        _________________________________________________________________________
                                     </Typography>
-                                    <Typography gutterBottom variant="h6" align ="center">
+                                    <Typography paragraph align="left" sx={{overflowWrap:"break-word", display:"block"}}>
                                         {body}
                                     </Typography>
                                 </CardContent>
