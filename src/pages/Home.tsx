@@ -68,28 +68,29 @@ export function Home() {
           <Grid container spacing={4}>
             {items && items.map((article: any) => (
               <Grid item key={article.id} xs={12} sm={6} md={4} lg={3}>
-                <Card variant="outlined" sx={{borderRadius:3, borderColor:"#f7b500", borderStyle:"double", transform:"translate(0vw, 13vh)", width:"20vw", height:"32vw", backgroundColor:"#1E1E1E", filter:"drop-shadow(10px 10px 10px black)"}}>
-                  <CardHeader sx={{backgroundColor:"#1e1e1e"}} title={
-                    <Typography sx={{fontSize: 20, color:"#f7b500", fontFamily:"Cabin Sketch", fontWeight:"bold"}}>
+                <Card variant="outlined" sx={{ borderRadius: 3, borderColor: "#f7b500", borderStyle: "double", transform: "translate(0vw, 13vh)", width: "20vw", height: "32vw", backgroundColor: "#1E1E1E", filter: "drop-shadow(10px 10px 10px black)" }}>
+                  <CardHeader sx={{ backgroundColor: "#1e1e1e" }} title={
+                    <Typography sx={{ fontSize: 20, color: "#f7b500", fontFamily: "Cabin Sketch", fontWeight: "bold" }}>
                       Testing font size
                     </Typography>} />
-                  <CardMedia sx={{borderTopStyle:"double", borderBottomStyle:"double", borderColor:"#A97637", borderRadius:3}}
+                  <CardMedia sx={{ borderTopStyle: "double", borderBottomStyle: "double", borderColor: "#A97637", borderRadius: 3 }}
                     component="img"
                     height="194"
                     image="https://source.unsplash.com/random"
                     title="Image title"
                   />
                   <CardContent>
-                    <Typography gutterBottom variant="h5" sx={{color:"white", fontFamily:"Righteous", width:"15vw"}}>
+                    <Typography gutterBottom variant="h5" sx={{ color: "white", fontFamily: "Righteous", width: "15vw" }}>
                       {article.title}
                     </Typography>
-                    <Typography sx={{color:"white", fontFamily:"Righteous", width:"17vw"}}>
+                    <Typography sx={{ color: "white", fontFamily: "Righteous", width: "17vw", fontSize:10, filter:"drop-shadow(10px 10px 10px white inset)"}}>
                       {article.body}
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button component={Link} to={'/read/'+article.id} variant="text" size="small" sx={{color:"#f7b500", fontFamily:"Righteous"}}>
-                      Read <KeyboardDoubleArrowRightIcon/>
+                    <Button component={Link} to={'/read/' + article.id} variant="text" size="small" sx={{ position: "fixed", color: "#f7b500", fontFamily: "Righteous" }}>
+                      Read
+                      <KeyboardDoubleArrowRightIcon />
                     </Button>
                   </CardActions>
                 </Card>

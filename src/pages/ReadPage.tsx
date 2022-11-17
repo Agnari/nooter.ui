@@ -36,7 +36,7 @@ export function ReadPage(){
                                  image="https://source.unsplash.com/random"
                                  title="Image title"
                                 />
-                                <CardContent>
+                                <CardContent sx={{size:"fixed", marginLeft: 5}}>
                                     <Typography variant="h2" align ="center">
                                         {title}
                                     </Typography>
