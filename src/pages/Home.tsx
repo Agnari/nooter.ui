@@ -8,6 +8,7 @@ import { styled } from '@mui/material/styles';
 import * as React from 'react';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import { red } from '@mui/material/colors';
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 export function Home() {
 
@@ -66,12 +67,12 @@ export function Home() {
           <Grid container spacing={4}>
             {items && items.map((article: any) => (
               <Grid item key={article.id} xs={12} sm={6} md={4} lg={3}>
-                <Card variant="outlined" sx={{borderRadius:3, borderColor:"white", borderStyle:"dashed", transform:"translate(0vw, 13vh)", width:"20vw", height:"32vw", backgroundColor:"#1E1E1E"}}>
+                <Card variant="outlined" sx={{borderRadius:3, borderColor:"#f7b500", borderStyle:"double", transform:"translate(0vw, 13vh)", width:"20vw", height:"32vw", backgroundColor:"#1E1E1E", filter:"drop-shadow(10px 10px 10px black)"}}>
                   <CardHeader sx={{backgroundColor:"#1e1e1e"}} title={
-                    <Typography sx={{fontSize: 15, color:"white", fontFamily:"Righteous"}}>
+                    <Typography sx={{fontSize: 20, color:"#f7b500", fontFamily:"Cabin Sketch", fontWeight:"bold"}}>
                       Testing font size
                     </Typography>} />
-                  <CardMedia sx={{borderTopStyle:"double", borderBottomStyle:"double", borderColor:"white"}}
+                  <CardMedia sx={{borderTopStyle:"double", borderBottomStyle:"double", borderColor:"#A97637", borderRadius:3}}
                     component="img"
                     height="194"
                     image="https://source.unsplash.com/random"
@@ -86,8 +87,8 @@ export function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button variant="text" size="small" sx={{color:"white", fontFamily:"Righteous"}}>
-                      Read 
+                    <Button variant="text" size="small" sx={{color:"#f7b500", fontFamily:"Righteous"}}>
+                      Read <KeyboardDoubleArrowRightIcon/>
                     </Button>
                   </CardActions>
                 </Card>
