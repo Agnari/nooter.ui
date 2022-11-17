@@ -41,7 +41,7 @@ export function YourPosts() {
                     <Grid item key={articles.title} xs={12} sm={12} md={12}>
                         <CheckCircleOutlineIcon sx={{ transform: "translate(-28px, 20px)", color: "darkred", filter: "drop-shadow(1px 1px 1px black)" }} />
 
-                        <Card sx={{ height: '87%', width: '95%', display: 'flex', background: "../backgrounds/wall.jpg", flexDirection: 'column', borderBottom: (theme) => `5px solid ${theme.palette.divider}`, borderColor: "#41424C", borderStyle: "solid", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"invert(7%)" }}>
+                        <Card sx={{ height: '87%', width: '95%', display: 'flex', background: "../backgrounds/wall.jpg", flexDirection: 'column', borderBottom: (theme) => `5px solid ${theme.palette.divider}`, borderColor: "#41424C", borderStyle: "solid", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"invert(15%)" }}>
                             <Stack direction="row">
                                 <CardContent sx={{ flexGrow: 1 }}>
                                     <p className="hover1" style={{ fontFamily: "Cabin Sketch", fontSize: 35, color: "#181818", maxWidth: "45.5vw" }}>
