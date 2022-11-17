@@ -1,6 +1,7 @@
 import { Typography, Card, CardActions, CardContent, CardMedia, Grid, Container, Button } from "@mui/material";
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 export function Home(){
 
@@ -53,8 +54,8 @@ export function Home(){
                                 </Typography>
                             </CardContent>
                             <CardActions>
-                                <Button variant="text" size="small" color="primary">
-                                    Read
+                                <Button component={Link} to={'/read/'+article.id} variant="text" size="small" color="primary">
+                                    Read more
                                 </Button>
                             </CardActions>
                         </Card>
@@ -67,4 +68,3 @@ export function Home(){
     );
   
 }
-
