@@ -267,7 +267,30 @@ CheckCircleOutlineIcon {
 .articleCard {
 transform:translate(0vw, 13vh);
 width:20vw;
-height:27vw;
+height:32vw;
+border-radius:3;
+border-style:double;
+}
+.paperfold::after{
+  content: '';
+  display: block;
+  border-width: 0px 75px 75px 0px;
+  border-style: solid;
+  border-color: #d7d7d7 transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.paperfold::after{
+  content: '';
+  display: block;
+  border-width: 0px 75px 75px 0px;
+  border-style: solid;
+  border-color: #d7d7d7 #FFF;
+  box-shadow: -5px 6px 10px rgb(129, 127, 127);
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .paperStack {
@@ -316,4 +339,8 @@ border: solid rgba(111,99,61,0.4);
 border-width: 0px 0px 0px 1px;
 right: 3px;
 top: -3px;
+}
+
+CardHeader {
+  height:4vw;
 }
