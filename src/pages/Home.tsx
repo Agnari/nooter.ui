@@ -9,9 +9,10 @@ import * as React from 'react';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import { red } from '@mui/material/colors';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { Link } from 'react-router-dom';
+
 
 export function Home() {
-
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
@@ -87,7 +88,7 @@ export function Home() {
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    <Button variant="text" size="small" sx={{color:"#f7b500", fontFamily:"Righteous"}}>
+                    <Button component={Link} to={'/read/'+article.id} variant="text" size="small" sx={{color:"#f7b500", fontFamily:"Righteous"}}>
                       Read <KeyboardDoubleArrowRightIcon/>
                     </Button>
                   </CardActions>
