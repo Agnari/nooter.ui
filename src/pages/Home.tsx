@@ -69,10 +69,10 @@ export function Home() {
             {items && items.map((article: any) => (
               <Grid item key={article.id} xs={12} sm={6} md={4} lg={6}>
                 <Card variant="outlined" sx={{ borderRadius: 3, borderColor: "#f7b500", borderStyle: "double", transform: "translate(0vw, 13vh)", backgroundColor: "#1E1E1E", maxHeight: "40vw", filter: "drop-shadow(10px 10px 10px black)" }}>
-                    <CardHeader sx={{ backgroundColor: "#1e1e1e" }} title={
-                      <Typography sx={{ fontSize: 25, color: "#f7b500", fontFamily: "Righteous", fontWeight: "bold", maxHeight: "5vw" }}>
-                        {article.title}
-                      </Typography>} />
+                  <CardHeader sx={{ backgroundColor: "#1e1e1e" }} title={
+                    <Typography sx={{ fontSize: 25, color: "#f7b500", fontFamily: "Righteous", fontWeight: "bold", maxHeight: "5vw" }}>
+                      {article.title}
+                    </Typography>} />
                   <CardMedia sx={{ borderTopStyle: "double", borderBottomStyle: "double", borderColor: "#A97637", borderRadius: 3 }}
                     component="img"
                     height="194"
