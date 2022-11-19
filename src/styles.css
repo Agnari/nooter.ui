@@ -341,6 +341,11 @@ right: 3px;
 top: -3px;
 }
 
-CardHeader {
-  height:4vw;
+.spin:hover {
+  animation: spin 0.4s;
+  animation-iteration-count: infinite;
+}
+
+.previewhover:hover {
+  width:50vw;
 }

@@ -97,19 +97,19 @@ export function NewPost() {
                 inputProps={{style:{fontFamily: "Righteous", textAlign:"center"}}}
 
             />
-            <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-1deg)", filter:"drop-shadow(-1px 1px 1px black)", width:"70vw", height:"49vh"}}
+            <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", filter:"drop-shadow(-1px 1px 1px black)"}}
                 placeholder="Write something here..."
                 id="body"
                 name = 'body'
                 multiline
                 fullWidth
                 rows={12}
-                inputProps={{style:{fontFamily: "Righteous", padding:'14.727540500736376vh', width: '55.55555555555556vw', height:'14.727540500736376vh', textAlign:"center"}}}
+                inputProps={{style:{fontFamily: "Righteous", width: '55.55555555555556vw', height:'23.8vw'}}}
             />
                     <Button 
                         type="submit"
                         variant="contained"
-                        sx={{fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(2deg)", marginBottom:3, left:"65vw", maxWidth:"7vw", maxHeight:"5.9vh", minWidth:"7vw", minHeight:"6.5vh"}}>
+                        sx={{fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(2deg)", marginBottom:3, left:"65vw", top:"1vw", maxWidth:"7vw", maxHeight:"5.9vh", minWidth:"7vw", minHeight:"6.5vh"}}>
                         Submit
                     </Button>
             
