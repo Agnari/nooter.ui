@@ -13,6 +13,9 @@ import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import '../styles.css';
 
 export function YourPosts() {
+
+    const Swal = require('sweetalert2');
+
     const [items, setItems] = useState([]);
     useEffect(() => {
         fetch("https://localhost:7018/api/articles")
@@ -25,9 +28,27 @@ export function YourPosts() {
             )
     }, [])
 
-    const deletePost = (id: string) => {
-        fetch("https://localhost:7018/api/articles/" + id, { method: 'DELETE' })
-        setItems((items) => items.filter((article: any) => article.id !== id))
+ const deletePost = (id: string) =>{
+
+    Swal.fire({
+        title: 'Are you sure?',
+        text: "You won't be able to revert this!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Yes, delete it!'
+      }).then((result: any) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'Article has been deleted.',
+            'success'
+          )
+          fetch("https://localhost:7018/api/articles/" + id, { method: 'DELETE' })
+          setItems((items) => items.filter((article: any) => article.id !== id))
+        }
+      })
     }
 
     return (

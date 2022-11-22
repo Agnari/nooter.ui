@@ -8,7 +8,10 @@ import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 
 export function Register() {
+
+    const Swal = require('sweetalert2');
     const navigate = useNavigate();
+
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -28,10 +31,30 @@ export function Register() {
             })
         };
         fetch('https://localhost:7018/api/users', requestOptions)
-            .then(response => response.json())
-            .then(() => navigate('/login'))
+            .then(response=>{
+                console.log(response)
+                if(response.ok){
+                        Swal.fire({
+                            title: 'Good job!',
+                            text: 'Account was created!',
+                            icon: 'success',
+                            confirmButtonText: 'OK'
+                        });
+                        return response.json()
+                        .then(() => navigate('/'))
+                    }
+                else{
+                        console.log(response)
+                        Swal.fire({
+                            title: 'Error!',
+                            text: 'Something was wrong',
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                          });
+                    }
+            })
     }
-
+    
     return (
         <Container style={{background: "url(https://img.freepik.com/free-photo/vintage-crumpled-paper-textured_53876-96063.jpg?t=st=1668288152~exp=1668288752~hmac=4b7bab87ab2d6a0477777fd2584b043def4808c24a8e1eb81573ca3b5b83b122)", backgroundSize:"cover"}} sx={{width:"100vh", transform:"translate(0vw, 14.727540500736376vh) rotate(-2deg)", border: 7, borderColor: "#2e2d2d", borderStyle:"dashed", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter:"drop-shadow(6px 6px 6px black)"}}>
         <Container component="main" maxWidth="xs">

@@ -6,8 +6,49 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import '../styles.css';
+import { createRef, useRef } from 'react';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 export function Login() {
+    const Swal = require('sweetalert2');
+    const navigate = useNavigate();
+    const emailRef = createRef<any>();
+    const passwordRef = createRef<any>();
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log("emailRef", emailRef.current.value, "passwordRef", passwordRef.current.value);
+        //fetch
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                email: emailRef.current.value,
+                password: passwordRef.current.value,
+            })
+        };
+        fetch('https://localhost:7018/api/account/login', requestOptions)
+            .then(response => {
+                if (response.ok) {
+                    return response.json()
+                        .then((result) => {
+                            localStorage.setItem("USER", JSON.stringify(result));
+                        })
+                        .then(() => window.location.href = "/")
+                }
+                else {
+                    console.log(response)
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Something was wrong',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            })
+    };
+
     return (
 
         <Container sx={{ transform: "translate(0vw, 14.727540500736376vh)" }}>
@@ -21,8 +62,9 @@ export function Login() {
                         alignItems: 'center',
                     }}>
 
-                        <Box component="form" noValidate sx={{ mt: 1, width: '45vw' }}>
+                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, width: '45vw' }}>
                             <TextField sx={{ width: "40vw" }}
+                                inputRef={emailRef}
                                 variant="standard"
                                 margin="normal"
                                 required
@@ -36,6 +78,7 @@ export function Login() {
                                 InputLabelProps={{ style: { fontFamily: "Cabin Sketch", color: "black" } }} />
 
                             <TextField sx={{ width: "45vw" }}
+                                inputRef={passwordRef}
                                 variant="standard"
                                 margin="normal"
                                 required

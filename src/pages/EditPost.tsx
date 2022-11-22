@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 export function EditPost() {
+
+    const Swal = require('sweetalert2');
     let articles = useParams();
     const navigate = useNavigate();
     const [title, setTitle] = useState(String);
@@ -32,17 +34,42 @@ export function EditPost() {
             body: data.get('body'),
         });
 
-        const requestOptions = {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                id: articles.id,
-                title: data.get('title'),
-                body: data.get('body'),
-            })
-        };
-        fetch('https://localhost:7018/api/articles/' + articles.id, requestOptions)
-            .then(() => navigate('/yourposts'))
+        if (data.get('title') === ''){
+            Swal.fire({
+                title: 'Error!',
+                text: 'Title is missing',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
+        }
+        else if (data.get('body') === ''){
+            Swal.fire({
+                title: 'Error!',
+                text: 'Text is missing',
+                icon: 'error',
+                confirmButtonText: 'OK'
+              });
+        }
+        else{
+            const requestOptions = {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    id: articles.id,
+                    title: data.get('title'),
+                    body: data.get('body'),
+                })
+            };
+            fetch('https://localhost:7018/api/articles/' + articles.id, requestOptions)
+                .then(() => navigate('/yourposts'))
+
+                Swal.fire({
+                    title: 'Good job!',
+                    text: 'Article was changed!',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                  });
+        }
     }
 
     return (
