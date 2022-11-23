@@ -34,9 +34,11 @@ export function YourPosts() {
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
         icon: 'warning',
+        iconColor:"red",
+        color:"red",
         showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
+        confirmButtonColor: 'darkred',
+        cancelButtonColor: '#3085d6',
         confirmButtonText: 'Yes, delete it!'
       }).then((result: any) => {
         if (result.isConfirmed) {
