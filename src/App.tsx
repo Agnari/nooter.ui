@@ -62,7 +62,7 @@ function App() {
             </Button>
           }
           {
-            user && <Button onClick={handleLogout} variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, -0.5vh)" }}>
+            user && <Button onClick={handleLogout} variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "darkred", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, -0.5vh)" }}>
               Logout
             </Button>
           }
