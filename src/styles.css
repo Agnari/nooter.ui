@@ -349,3 +349,14 @@ top: -3px;
 .previewhover:hover {
   width:50vw;
 }
+
+.loom {
+  width:300px;
+  height:300px;
+  transform:translate(50vw, -20vw)
+}
+
+@keyframes loom {
+  0% {transform:translate(-10vw) rotate(30deg)}
+  100%{}
+}
