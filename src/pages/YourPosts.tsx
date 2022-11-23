@@ -73,8 +73,8 @@ export function YourPosts() {
                                 </CardContent>
                                 <CardActions>
 
-                                    <Button className="hover-2" component={Link} to={'/editpost/' + articles.id} size="small" variant="contained" style={{ fontFamily: "Righteous", fontSize: 20, color: "black", backgroundColor: "#C09372", padding: "10px 15px 20px" }}><p style={{margin:0, padding:0, marginLeft:6}}>Edit</p></Button>
-                                    <Button className="hover-2" onClick={() => deletePost(articles.id)} size="small" variant="contained" style={{ fontFamily: "Righteous", fontSize: 20, color: "black", backgroundColor: "#8B0000", padding: "10px 15px 20px" }}><p style={{margin:0, padding:0, marginLeft:6}}>Delete</p></Button>
+                                    <Button className="hover-2" component={Link} to={'/editpost/' + articles.id} size="small" variant="contained" style={{ fontFamily: "Righteous", fontSize: 20, color: "black", backgroundColor: "#C09372", padding: "10px 15px 20px" }}><p style={{margin:0, padding:0, marginLeft:6, filter:"drop-shadow(0.5px 0.5px 0.5px black)"}}>Edit</p></Button>
+                                    <Button className="hover-2" onClick={() => deletePost(articles.id)} size="small" variant="contained" style={{ fontFamily: "Righteous", fontSize: 20, color: "black", backgroundColor: "#8B0000", padding: "10px 15px 20px" }}><p style={{margin:0, padding:0, marginLeft:6, filter:"drop-shadow(0.5px 0.5px 0.5px black)"}}>Delete</p></Button>
 
                                 </CardActions>
                             </Stack>

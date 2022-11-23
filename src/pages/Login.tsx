@@ -41,6 +41,7 @@ export function Login() {
                     console.log(response)
                     Swal.fire({
                         title: 'Error!',
+                        color: 'Red',
                         text: 'Something was wrong',
                         icon: 'error',
                         confirmButtonText: 'OK'

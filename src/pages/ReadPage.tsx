@@ -26,9 +26,9 @@ export function ReadPage() {
         <>
             <main>
                 <Box sx={{ m: 10 }}>
-                    <Container maxWidth="md">
+                    <Container sx={{maxWidth:'95vw', width:'90vw', align:'center'}}>
 
-                        <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, darkgrey, lightgrey)" }}>
+                        <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, white, lightgrey)" }}>
                             <CardMedia sx={{ borderBottomColor: "black", borderRadius: 3, borderBottom: 10, borderBottomStyle: "double" }}
                                 component="img"
                                 height="400"
@@ -42,7 +42,7 @@ export function ReadPage() {
                                 <Typography gutterBottom align="center">
                                     _________________________________________________________________________
                                 </Typography>
-                                <Typography paragraph align="left" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "" }}>
+                                <Typography paragraph align="left" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "Roboto" }}>
                                     {body}
                                 </Typography>
                             </CardContent>
