@@ -29,7 +29,7 @@ function App() {
   return (
     <>
       <AppBar
-        position="absolute"
+        position="sticky"
         color="default"
         elevation={0}
         sx={{ height: "62px", background: "#242323" }}

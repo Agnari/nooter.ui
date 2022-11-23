@@ -52,7 +52,6 @@ export function Login() {
     return (
 
         <Container sx={{ transform: "translate(0vw, 14.727540500736376vh)" }}>
-
             <Container style={{ background: "url(https://img.freepik.com/free-photo/vintage-crumpled-paper-textured_53876-96063.jpg?t=st=1668288152~exp=1668288752~hmac=4b7bab87ab2d6a0477777fd2584b043def4808c24a8e1eb81573ca3b5b83b122)", backgroundSize: "cover" }} sx={{ transform: "rotate(3deg)", width: '100vh', height: "60vh", border: 7, borderColor: "#2e2d2d", borderStyle: "dashed", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", filter: "drop-shadow(6px 6px 6px black)" }}>
 
                 <Container maxWidth="xs">
