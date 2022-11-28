@@ -8,12 +8,14 @@ import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 
 export function EditPost() {
+    const userStr = localStorage.getItem("USER");
+    const [user, setUser] = useState(userStr ? JSON.parse(userStr) : null);
 
     const Swal = require('sweetalert2');
     let articles = useParams();
     const navigate = useNavigate();
-    const [title, setTitle] = useState(String);
-    const [body, setBody] = useState(String);
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
 
     useEffect(() => {
         fetch("https://localhost:7018/api/articles/" + articles.id)
@@ -55,9 +57,9 @@ export function EditPost() {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    id: articles.id,
                     title: data.get('title'),
                     body: data.get('body'),
+                    authorId: user.userId,
                 })
             };
             fetch('https://localhost:7018/api/articles/' + articles.id, requestOptions)

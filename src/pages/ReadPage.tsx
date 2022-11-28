@@ -9,8 +9,9 @@ export function ReadPage() {
 
     let articles = useParams();
 
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
+    const [author, setAuthor] = useState("");
 
     useEffect(() => {
         fetch("https://localhost:7018/api/articles/" + articles.id)
@@ -19,6 +20,7 @@ export function ReadPage() {
                 (result) => {
                     setTitle(result.title);
                     setBody(result.body);
+                    setAuthor(result.authorName);
                 }
             )
     }, [])
@@ -44,6 +46,9 @@ export function ReadPage() {
                                 </Typography>
                                 <Typography paragraph align="left" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "" }}>
                                     {body}
+                                </Typography>
+                                <Typography paragraph align="right" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "" }}>
+                                    Posted by: {author}
                                 </Typography>
                             </CardContent>
                         </Card>

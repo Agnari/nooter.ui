@@ -8,9 +8,11 @@ import { useNavigate } from 'react-router-dom';
 import CssBaseline from '@mui/material/CssBaseline';
 import Swal from 'sweetalert2'
 import { rootCertificates } from "tls";
-
+import { useEffect, useState } from "react";
 
 export function NewPost() {
+    const userStr = localStorage.getItem("USER");
+    const [user, setUser] = useState(userStr ? JSON.parse(userStr) : null);
 
     const Swal = require('sweetalert2');
 
@@ -22,6 +24,7 @@ export function NewPost() {
         console.log({
             title: data.get('title'),
             body: data.get('body'),
+            authorId: user.userId,
         });
 
         if (data.get('title') === ''){
@@ -49,6 +52,7 @@ export function NewPost() {
             body: JSON.stringify({
                 title: data.get('title'),
                 body: data.get('body'),
+                authorId: user.userId,
             })
         };
     
