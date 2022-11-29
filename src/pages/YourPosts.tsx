@@ -10,6 +10,7 @@ import { Link } from 'react-router-dom';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
 import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import React from 'react';
 import '../styles.css';
 
 export function YourPosts() {

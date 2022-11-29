@@ -4,6 +4,7 @@ import { Typography, Card, CardActions, CardContent, CardMedia, Grid, Container,
 import React from "react";
 import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
+import { getSpaceUntilMaxLength } from '@testing-library/user-event/dist/utils';
 
 export function ReadPage() {
 
@@ -12,6 +13,7 @@ export function ReadPage() {
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [author, setAuthor] = useState("");
+    const [imageURL, setImageURL] = useState("");
 
     useEffect(() => {
         fetch("https://localhost:7018/api/articles/" + articles.id)
@@ -21,6 +23,7 @@ export function ReadPage() {
                     setTitle(result.title);
                     setBody(result.body);
                     setAuthor(result.authorName);
+                    setImageURL(result.imageURL);
                 }
             )
     }, [])
@@ -31,10 +34,12 @@ export function ReadPage() {
                     <Container sx={{maxWidth:'95vw', width:'90vw', align:'center'}}>
 
                         <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, white, lightgrey)" }}>
-                            <CardMedia sx={{ borderBottomColor: "black", borderRadius: 3, borderBottom: 10, borderBottomStyle: "double" }}
+                            <CardMedia sx={{ borderBottomColor: "black", borderRadius: 3, borderBottom: 10, borderBottomStyle: "double", objectFit: "contain" }}
+
                                 component="img"
-                                height="400"
-                                image="https://source.unsplash.com/random"
+                                width="500px"
+                                height="500px"
+                                image={imageURL}
                                 title="Image title"
                             />
                             <CardContent sx={{ size: "fixed", marginLeft: 5 }}>

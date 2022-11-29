@@ -9,8 +9,11 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Swal from 'sweetalert2'
 import { rootCertificates } from "tls";
 import { useEffect, useState } from "react";
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
 
 export function NewPost() {
+
     const userStr = localStorage.getItem("USER");
     const [user, setUser] = useState(userStr ? JSON.parse(userStr) : null);
 
@@ -24,6 +27,7 @@ export function NewPost() {
         console.log({
             title: data.get('title'),
             body: data.get('body'),
+            imageURL: data.get('photo'),
             authorId: user.userId,
         });
 
@@ -46,17 +50,27 @@ export function NewPost() {
         }
 
         else{
+
+        var link;
+
+        if(data.get('photo') === ''){
+            link = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrFhmYdSEADE38XKSaXSNMa9qLWvUzSwkEYg&usqp=CAU";
+        }
+        else{
+            link = data.get('photo');
+        }
+
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 title: data.get('title'),
                 body: data.get('body'),
+                imageURL: link,
                 authorId: user.userId,
             })
         };
     
-
         fetch('https://localhost:7018/api/articles', requestOptions)
         .then(() => navigate('/'))
 
@@ -113,10 +127,22 @@ export function NewPost() {
                     <Button 
                         type="submit"
                         variant="contained"
-                        sx={{fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(2deg)", marginBottom:3, left:"65vw", top:"1vw", maxWidth:"7vw", maxHeight:"5.9vh", minWidth:"7vw", minHeight:"6.5vh"}}>
+                        sx={{fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border:2, borderColor:"white", borderStyle:"double", transform:"rotate(2deg)", marginBottom:3, left:"65vw", top:"5vw", maxWidth:"7vw", maxHeight:"5.9vh", minWidth:"7vw", minHeight:"6.5vh"}}>
                         Submit
                     </Button>
-            
+                    <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Add image's URL: </h2>
+
+                <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(0deg)", filter:"drop-shadow(-1px 1px 1px black)", width:"25vw", height:"4.5vh",top:"-6vw", left:"15vw",border: 1,borderRadius: '16px'}}
+                margin="normal"
+                variant="standard"
+                required
+                fullWidth
+                id="photo"
+                placeholder="Enter URL!"
+                name = 'photo'
+                inputProps={{style:{fontFamily: "Righteous", textAlign:"center"}}}
+
+            />
             </Box>
             </Box>
             </Box>
@@ -125,4 +151,5 @@ export function NewPost() {
         </Container>
         
     )
+
 }

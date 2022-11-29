@@ -9,6 +9,7 @@ import '../styles.css';
 import { createRef, useRef } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 export function Login() {
     const Swal = require('sweetalert2');

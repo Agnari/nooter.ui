@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import React from 'react';
 
 export function EditPost() {
     const userStr = localStorage.getItem("USER");
@@ -16,6 +17,7 @@ export function EditPost() {
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
+    const [imageURL,setImageURL] = useState("");
 
     useEffect(() => {
         fetch("https://localhost:7018/api/articles/" + articles.id)
@@ -24,6 +26,7 @@ export function EditPost() {
                 (result) => {
                     setTitle(result.title);
                     setBody(result.body);
+                    setImageURL(result.imageURL);
                 }
             )
     }, [])
@@ -34,6 +37,7 @@ export function EditPost() {
         console.log({
             title: data.get('title'),
             body: data.get('body'),
+            imageURL: data.get('photo'),
         });
 
         if (data.get('title') === ''){
@@ -59,6 +63,7 @@ export function EditPost() {
                 body: JSON.stringify({
                     title: data.get('title'),
                     body: data.get('body'),
+                    imageURL: data.get('photo'),
                     authorId: user.userId,
                 })
             };
@@ -115,12 +120,31 @@ export function EditPost() {
                                 type="submit"
                                 fullWidth
                                 variant="contained"
-                                sx={{ mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%" }}
+                                sx={{ mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%",top:"4vw", }}
                                 >
                                 Submit Changes
                             </Button>
+
                         </Grid>
+
+                    
                     </Grid>
+
+                    <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Change image's URL: </h2>
+
+                    <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(0deg)", filter:"drop-shadow(-1px 1px 1px black)", width:"25vw", height:"4.5vh",top:"-6vw", left:"17vw",border: 1}}
+                    margin="normal"
+                    variant="standard"
+                    required
+                    fullWidth
+                    id="photo"
+                    placeholder="Enter URL!"
+                    name = 'photo'
+                    value={imageURL}
+                    onChange={event => setImageURL(event.target.value)}
+                    inputProps={{style:{fontFamily: "Righteous", textAlign:"center"}}}
+
+                    />
                 </Container>
             </Container>
     )
