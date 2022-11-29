@@ -79,10 +79,11 @@ export function Home() {
                       </Typography>
                     </>
                   } />
-                  <CardMedia sx={{ borderTopStyle: "double", borderBottomStyle: "double", borderColor: "#A97637", borderRadius: 3 }}
+                  <CardMedia sx={{ borderTopStyle: "double", borderBottomStyle: "double", borderColor: "#A97637", borderRadius: 3,objectFit: "contain" }}
                     component="img"
                     height="194"
-                    image="https://source.unsplash.com/random"
+                    width= "100%"
+                    image={article.imageURL}
                     title="Image title"
                   />
                   <CardContent>
@@ -109,4 +110,3 @@ export function Home() {
   );
 
 }
-
