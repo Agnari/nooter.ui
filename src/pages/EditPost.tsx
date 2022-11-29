@@ -3,24 +3,25 @@ import { Container } from "@mui/system";
 import TextField from '@mui/material/TextField'
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
-import { useParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
 
 export function EditPost() {
+    const [id, setId] = useSearchParams();
+
     const userStr = localStorage.getItem("USER");
     const [user, setUser] = useState(userStr ? JSON.parse(userStr) : null);
 
     const Swal = require('sweetalert2');
-    let articles = useParams();
     const navigate = useNavigate();
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [imageURL,setImageURL] = useState("");
 
     useEffect(() => {
-        fetch("https://localhost:7018/api/articles/" + articles.id)
+        fetch("https://localhost:7018/api/articles/" + id.get("id"))
             .then(res => res.json())
             .then(
                 (result) => {
@@ -67,7 +68,7 @@ export function EditPost() {
                     authorId: user.userId,
                 })
             };
-            fetch('https://localhost:7018/api/articles/' + articles.id, requestOptions)
+            fetch('https://localhost:7018/api/articles/' + id.get("id"), requestOptions)
                 .then(() => navigate('/yourposts'))
 
                 Swal.fire({
