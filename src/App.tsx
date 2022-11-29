@@ -80,9 +80,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
-        <Route path="/editpost/:id" element={<EditPost />} />
+        <Route path="/editpost/:article" element={<EditPost />} />
         <Route path="/yourposts" element={<YourPosts />} />
-        <Route path="/read/:id" element={<ReadPage />} />
+        <Route path="/read/:article" element={<ReadPage />} />
       </Routes>
     </>
 
