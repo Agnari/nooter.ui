@@ -36,34 +36,30 @@ function App() {
         sx={{ height: "62px", background: "#242323" }}
       >
 
-        <Toolbar sx={{ flexWrap: 'wrap', transform: "translate(0vh, -1vh)", borderBottomColor: "#f7b500", borderBottomStyle: "dashed" }}>
+        <Toolbar sx={{ display:"flex", flexDirection:"row", flexWrap: 'wrap', transform: "translate(0vh, -1vh)", borderBottomColor: "#f7b500", borderBottomStyle: "dashed" }}>
 
-          <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -2vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}>
+          <Link variant="h6" color="inherit" href="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -1vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}>
             <img className="stickerM" src={require('./stickers/nootnoot.png')} alt="oops" />NOOTER
           </Link>
           {
-            user && <PostAddIcon sx={{ color: "white", transform: "translate(-33vw, -0.5vh)" }} />
-          }
-          {
-            user && <DynamicFeedIcon sx={{ color: "white", transform: "translate(-18vw, -0.1vh)" }} />
-          }
-          {
-            user && <Link className="animationshut" href="/newpost" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-35.7vw, 1.4vh)" }}>
+            user && <Link className='taskhover' href="/newpost" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-40vw, 1.3vh)" }}>
+              <PostAddIcon sx={{ color: "white" }} />
               Noot
             </Link>
           }
           {
-            user && <Link className="animationshut" href="/yourposts" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-25.1vw, 1.5vh)" }}>
+            user && <Link className='taskhover' href="/yourposts" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-25vw, 1.3vh)" }}>
+            <DynamicFeedIcon sx={{ color: "white" }} />
               Stuff
             </Link>
           }
           {
-            !user && <Button href="/login" variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.8vh)" }}>
+            !user && <Button href="/login" variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }}>
               Login
             </Button>
           }
           {
-            user && <Button onClick={handleLogout} variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "darkred", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, -0.5vh)" }}>
+            user && <Button onClick={handleLogout} variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "darkred", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }}>
               Logout
             </Button>
           }
