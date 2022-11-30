@@ -48,7 +48,7 @@ function App() {
             </Link>
           }
           {
-            user && <Link className='taskhover' href="/yourposts" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-25vw, 1.3vh)" }}>
+            user && <Link className='taskhover' href={"/yourposts/user?id=" + user.userId} underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-25vw, 1.3vh)" }}>
             <DynamicFeedIcon sx={{ color: "white" }} />
 
               Stuff
