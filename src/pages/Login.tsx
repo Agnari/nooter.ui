@@ -110,9 +110,6 @@ export function Login() {
 
                                 </Grid>
                             </Grid>
-                            <img className="redpin" src={require("../stickers/pin.png")} style={{ transform: "translate(-5.555555555555555vw, -61.855670103092784vh) rotate(180deg)" }} alt="pin" />
-                            <img className="bluepin" src={require("../stickers/bpin.png")} style={{ transform: "translate(38vw, -63vh) rotate(20deg)" }} alt="pin" />
-
                         </Box>
                     </Box>
                 </Container>
