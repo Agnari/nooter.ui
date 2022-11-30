@@ -50,6 +50,7 @@ function App() {
           {
             user && <Link className='taskhover' href="/yourposts" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-25vw, 1.3vh)" }}>
             <DynamicFeedIcon sx={{ color: "white" }} />
+
               Stuff
             </Link>
           }
@@ -77,7 +78,7 @@ function App() {
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
         <Route path="/editpost/:article" element={<EditPost />} />
-        <Route path="/yourposts" element={<YourPosts />} />
+        <Route path="/yourposts/:user" element={<YourPosts />} />
         <Route path="/read/:article" element={<ReadPage />} />
       </Routes>
     </>
