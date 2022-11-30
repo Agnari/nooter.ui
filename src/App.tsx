@@ -53,7 +53,7 @@ function App() {
             </Link>
           }
           {
-            user && <Link className="animationshut" href="/yourposts" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-25.1vw, 1.5vh)" }}>
+            user && <Link className="animationshut" href={"/yourposts/user?id=" + user.userId}underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-25.1vw, 1.5vh)" }}>
               Stuff
             </Link>
           }
@@ -81,7 +81,7 @@ function App() {
         <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
         <Route path="/editpost/:article" element={<EditPost />} />
-        <Route path="/yourposts" element={<YourPosts />} />
+        <Route path="/yourposts/:user" element={<YourPosts />} />
         <Route path="/read/:article" element={<ReadPage />} />
       </Routes>
     </>
