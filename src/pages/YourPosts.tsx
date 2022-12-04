@@ -8,10 +8,9 @@ import Container from '@mui/material/Container';
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from 'react-router-dom';
 import DoneOutlineIcon from '@mui/icons-material/DoneOutline';
-import CheckBoxOutlineBlankIcon from '@mui/icons-material/CheckBoxOutlineBlank';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import React from 'react';
 import '../styles.css';
+import { getToken } from '../utils/auth';
 
 export function YourPosts() {
     const [id, setId] = useSearchParams();
@@ -29,6 +28,7 @@ export function YourPosts() {
             )
     }, [])
 
+    const token = getToken();
     const deletePost = (id: string) => {
 
         Swal.fire({
@@ -48,7 +48,13 @@ export function YourPosts() {
                     'Article has been deleted.',
                     'success'
                 )
-                fetch("https://localhost:7018/api/articles/" + id, { method: 'DELETE' })
+                fetch("https://localhost:7018/api/articles/" + id, {
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    method: 'DELETE'
+                })
                 setItems((items) => items.filter((article: any) => article.id !== id))
             }
         })

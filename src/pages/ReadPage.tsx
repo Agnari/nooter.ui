@@ -1,20 +1,19 @@
 import '../styles.css'
-import { useSearchParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { Typography, Card, CardActions, CardContent, CardMedia, Grid, Container, Button } from "@mui/material";
 import React from "react";
 import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
-import { getSpaceUntilMaxLength } from '@testing-library/user-event/dist/utils';
 
 export function ReadPage() {
-    const [id, setId] = useSearchParams();
+    const { id } = useParams()
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [author, setAuthor] = useState("");
     const [imageURL, setImageURL] = useState("");
 
     useEffect(() => {
-        fetch("https://localhost:7018/api/articles/" + id.get("id"))
+        fetch("https://localhost:7018/api/articles/" + id)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -24,7 +23,7 @@ export function ReadPage() {
                     setImageURL(result.imageURL);
                 }
             )
-    }, [])
+    }, [id])
     return (
         <>
             <main>

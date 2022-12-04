@@ -16,7 +16,7 @@ export function Home() {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-  
+
   useEffect(() => {
     fetch("https://localhost:7018/api/articles")
       .then(res => res.json())
@@ -94,7 +94,7 @@ export function Home() {
                   </CardContent>
                   <CardActions>
 
-                    <Button component={Link} to={'/read/' + article.title.replace(/ /g, '-') + '?id=' + article.id} variant="text" size="small" sx={{ position: "fixed", color: "#f7b500", fontFamily: "Righteous", paddingBottom: "2vw" }}>
+                    <Button component={Link} to={`/read/${article.id}`} variant="text" size="small" sx={{ position: "fixed", color: "#f7b500", fontFamily: "Righteous", paddingBottom: "2vw" }}>
                       Read full article
                       <KeyboardDoubleArrowRightIcon />
                     </Button>
