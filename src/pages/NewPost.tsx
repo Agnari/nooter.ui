@@ -25,12 +25,6 @@ export function NewPost() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    console.log({
-      title: data.get('title'),
-      body: data.get('body'),
-      imageURL: data.get('photo'),
-      authorId: user.userId,
-    });
 
     if (data.get('title') === '') {
       Swal.fire({
