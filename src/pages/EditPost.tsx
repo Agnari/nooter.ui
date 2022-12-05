@@ -7,6 +7,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
+import { getToken } from "../utils/auth";
 
 export function EditPost() {
     const [id, setId] = useSearchParams();
@@ -41,6 +42,7 @@ export function EditPost() {
             imageURL: data.get('photo'),
         });
 
+        const token = getToken();
         if (data.get('title') === ''){
             Swal.fire({
                 title: 'Error!',
@@ -60,7 +62,10 @@ export function EditPost() {
         else{
             const requestOptions = {
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                  },
                 body: JSON.stringify({
                     title: data.get('title'),
                     body: data.get('body'),

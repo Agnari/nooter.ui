@@ -11,6 +11,7 @@ import { rootCertificates } from "tls";
 import { useEffect, useState } from "react";
 import * as React from 'react';
 import Stack from '@mui/material/Stack';
+import { getToken } from "../utils/auth";
 
 export function NewPost() {
 

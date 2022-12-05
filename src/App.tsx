@@ -48,7 +48,7 @@ function App() {
             </Link>
           }
           {
-            user && <Link className='taskhover' href="/yourposts" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-25vw, 1.3vh)" }}>
+            user && <Link className='taskhover' href={"/yourposts/user?id=" + user.userId} underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform:"translate(-25vw, 1.3vh)" }}>
             <DynamicFeedIcon sx={{ color: "white" }} />
 
               Stuff
@@ -79,7 +79,7 @@ function App() {
         <Route path="/newpost" element={<NewPost />} />
         <Route path="/editpost/:article" element={<EditPost />} />
         <Route path="/yourposts/:user" element={<YourPosts />} />
-        <Route path="/read/:article" element={<ReadPage />} />
+        <Route path="/read/:id" element={<ReadPage />} />
       </Routes>
     </>
 
