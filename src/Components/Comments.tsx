@@ -7,7 +7,8 @@ export function Comments() {
     const { id } = useParams()
     const [text, setText] = useState("");
     const [articleId, setarticleId] = useState("");
-    const [article, setArticle] = useState("");
+    const [UserName, setUserName] = useState("");
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch("https://localhost:7018/api/comments/" + id)
@@ -16,7 +17,9 @@ export function Comments() {
                 (result) => {
                     setText(result.text);
                     setarticleId(result.articleId);
-                    setArticle(result.article);
+                    setUserName(result.UserName);
+
+                    setItems(result.items);
                 }
             )
     }, [id])
@@ -33,58 +36,68 @@ export function Comments() {
 
                             </CardContent>
                             <List >
-                            <Card sx={{ border: 1, borderRadius: '50px' }}>
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                <Avatar alt="?" src="/static/images/avatar/1.jpg" />
-                </ListItemAvatar>
-                <ListItemText
-                primary="Username"
-                secondary={
-                    <React.Fragment>
-                    <Typography
-                        sx={{ display: 'inline' }}
-                        component="span"
-                        variant="body2"
-                        color="text.primary"
-                    >
-                    </Typography>
-                    {text}
-                    </React.Fragment>
-                }
-                />
-            </ListItem>
-      </Card>
-        <Card sx={{ border: 1, borderRadius: '50px' }}>
-            <ListItem alignItems="flex-start">
-                <ListItemAvatar>
-                <Avatar alt="?" src="/static/images/avatar/1.jpg" />
-                </ListItemAvatar>
-                <ListItemText
-                primary="Username"
-                secondary={
-                    <React.Fragment>
-                    <Typography
-                        sx={{ display: 'inline' }}
-                        component="span"
-                        variant="body2"
-                        color="text.primary"
-                    >
-                    </Typography>
-                    {text}
-                    </React.Fragment>
-                }
-                />
-            </ListItem>
-      </Card>
-      <Divider variant="inset" component="li" />
-    </List>
+                                <Card sx={{ border: 1, borderRadius: '50px' }}>
+                                    <ListItem alignItems="flex-start">
+                                        <ListItemAvatar>
+                                            <Avatar alt="?" src="/static/images/avatar/1.jpg" />
+                                        </ListItemAvatar>
+                                        <ListItemText
+                                            primary="Username"
+                                            secondary={
+                                                <React.Fragment>
+                                                    <Typography
+                                                        sx={{ display: 'inline' }}
+                                                        component="span"
+                                                        variant="body2"
+                                                        color="text.primary"
+                                                    >
+                                                    </Typography>
+                                                    <TextField
+                                                        margin="none"
+                                                        variant="standard"
+                                                        required
+                                                        fullWidth
+                                                        id="title"
+                                                        placeholder="Comment here"
+                                                        name='title'
+                                                    />
+                                                </React.Fragment>
+                                            }
+                                        />
+                                    </ListItem>
+                                </Card>
+                                {items && items.map((Comment: any) => (
+                                    <Card sx={{ border: 1, borderRadius: '50px' }}>
+                                        <ListItem alignItems="flex-start">
+                                            <ListItemAvatar>
+                                                <Avatar alt="?" src="/static/images/avatar/1.jpg" />
+                                            </ListItemAvatar>
+                                            <ListItemText
+                                                primary="Username"
+                                                secondary={
+                                                    <React.Fragment>
+                                                        <Typography
+                                                            sx={{ display: 'inline' }}
+                                                            component="span"
+                                                            variant="body2"
+                                                            color="text.primary"
+                                                        >
+                                                        </Typography>
+                                                        {text}
+                                                    </React.Fragment>
+                                                }
+                                            />
+                                        </ListItem>
+                                    </Card>
+                                ))}
+                                < Divider variant="inset" component="li" />
+                            </List>
                         </Card>
                     </Container>
                 </Box>
             </main>
-            
-            
+
+
         </>
     )
 }
