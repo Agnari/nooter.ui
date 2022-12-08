@@ -7,6 +7,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
+import { Link as RouterLink} from 'react-router-dom';
 
 export function Register() {
 
@@ -118,7 +119,7 @@ export function Register() {
                         </Button>
                         <Grid container justifyContent="flex-end">
                             <Grid item style={{ paddingBottom: 20 }}>
-                                <Link href="/login" variant="body2" underline="always" style={{ fontFamily: "Righteous", color: "darkred", filter: "drop-shadow(1px 1px 1px black)" }}>
+                                <Link component={RouterLink} to="/login" variant="body2" underline="always" style={{ fontFamily: "Righteous", color: "darkred", filter: "drop-shadow(1px 1px 1px black)" }}>
                                     Already have an account? Sign in!
                                 </Link>
                             </Grid>
