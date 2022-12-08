@@ -10,6 +10,7 @@ import { createRef, useRef } from 'react';
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
+import { Link as RouterLink} from 'react-router-dom';
 
 export function Login() {
     const Swal = require('sweetalert2');
@@ -19,7 +20,7 @@ export function Login() {
 
     const handleSubmit = (e: any) => {
         e.preventDefault();
-        console.log("emailRef", emailRef.current.value, "passwordRef", passwordRef.current.value);
+        //console.log("emailRef", emailRef.current.value, "passwordRef", passwordRef.current.value);
         //fetch
         const requestOptions = {
             method: 'POST',
@@ -104,7 +105,7 @@ export function Login() {
                             <Grid container>
                                 <Grid item xs></Grid>
                                 <Grid item style={{ paddingBottom: 20, transform: "translate(0vh, -5vh)" }}>
-                                    <Link className="doit" href="/register" variant="body2" underline="always" style={{ color: "darkred", fontFamily: "Righteous", filter: "drop-shadow(1px 1px 1px black)" }}>
+                                    <Link className="doit" component={RouterLink} to="/register" variant="body2" underline="always" style={{ color: "darkred", fontFamily: "Righteous", filter: "drop-shadow(1px 1px 1px black)" }}>
                                         <img className="ducktrigger" src={require("../stickers/uralreadydead.png")} alt="register... or die." />
                                     </Link>
 

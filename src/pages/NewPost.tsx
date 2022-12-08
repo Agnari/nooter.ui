@@ -91,7 +91,7 @@ export function NewPost() {
 
                 <h2 style={{ fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Add post </h2>
 
-                <Box>
+                <Box component="form" noValidate onSubmit={handleSubmit}>
                     <Box sx={{
                         marginTop: 8,
                         display: 'flex',
@@ -100,7 +100,7 @@ export function NewPost() {
                         transform: "translate(0px, -11.782032400589102vh)"
                     }}
                     >
-                        <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, width: "70vw", paddingTop: '5vh' }}>
+                        <Box sx={{ mt: 1, width: "70vw", paddingTop: '5vh' }}>
 
                             <TextField sx={{ background: "url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform: "rotate(-0.4deg)", filter: "drop-shadow(-1px 1px 1px black)", width: "70vw", height: "4.5vh" }}
                                 margin="normal"
