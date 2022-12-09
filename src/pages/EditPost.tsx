@@ -22,7 +22,7 @@ export function EditPost() {
     const [imageURL,setImageURL] = useState("");
 
     useEffect(() => {
-        fetch("https://localhost:7018/api/articles/" + id.get("id"))
+        fetch("https://localhost:7018/api/comments/" + id.get("id"))
             .then(res => res.json())
             .then(
                 (result) => {

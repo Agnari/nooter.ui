@@ -4,6 +4,7 @@ import { Typography, Card, CardActions, CardContent, CardMedia, Grid, Container,
 import React from "react";
 import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
+import {Comments} from '../Components/Comments'
 
 export function ReadPage() {
     const { id } = useParams()
@@ -56,6 +57,7 @@ export function ReadPage() {
                         </Card>
                     </Container>
                 </Box>
+                <Comments/>
             </main>
         </>
     );
