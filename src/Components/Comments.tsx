@@ -11,19 +11,12 @@ export function Comments() {
     const [user, setUser] = useState(userStr ? JSON.parse(userStr) : null);
     const Swal = require('sweetalert2');
     const navigate = useNavigate();
-    const { id } = useParams()
-    const [text, setText] = useState("");
-    const [UserName, setUserName] = useState("");
+    const { id } = useParams();
     const [items, setItems] = useState([]);
+    const [value, setValue] = useState('');
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            text: data.get('text'),
-            authorId: user.userId,
-        });
-
         const token = getToken();
         const requestOptions = {
             method: 'POST',
@@ -32,12 +25,12 @@ export function Comments() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                text: data.get('text'),
+                text: value,
                 articleId: id,
 
             })
         };
-        if (data.get('text') === '') {
+        if (value === '') {
             Swal.fire({
                 title: 'Error!',
                 text: 'Text is missing',
@@ -45,10 +38,28 @@ export function Comments() {
                 confirmButtonText: 'OK'
             });
         }
-        fetch('https://localhost:7018/api/comments/', requestOptions)
-        .then (()=>navigate(window.location.pathname))
-
+        else {
+            fetch('https://localhost:7018/api/comments/', requestOptions)
+                .then(() => Swal.fire({
+                    position: 'middle',
+                    icon: 'success',
+                    title: 'Comment was added',
+                    showConfirmButton: false,
+                    timer: 1500
+                }))
+                .then(() => fetch("https://localhost:7018/api/comments/" + id)
+                    .then(res => res.json())
+                    .then(
+                        (result) => {
+                            setValue('');
+                            setItems(result);
+                            console.log(result);
+                        }
+                    )
+                )
+        }
     }
+
     useEffect(() => {
         fetch("https://localhost:7018/api/comments/" + id)
             .then(res => res.json())
@@ -58,10 +69,8 @@ export function Comments() {
                     console.log(result);
                 }
             )
+
     }, [id])
-    console.log(items);
-
-
 
     return (
         <>
@@ -76,7 +85,7 @@ export function Comments() {
 
                             </CardContent>
                             <List >
-                                <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, paddingTop: '5vh' }}>
+                                {user && <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
                                     <Card sx={{ border: 1, borderRadius: '50px' }}>
                                         <ListItem alignItems="flex-start">
                                             <ListItemAvatar>
@@ -96,6 +105,8 @@ export function Comments() {
                                                     id="text"
                                                     placeholder="Comment here"
                                                     name='text'
+                                                    value={value}
+                                                    onChange={(e) => setValue(e.target.value)}
                                                 />
                                                 <Button
                                                     type="submit"
@@ -105,34 +116,34 @@ export function Comments() {
                                             </React.Fragment>
                                         </ListItem>
                                     </Card>
-                                </Box>
-                                <Grid container spacing={0.5} sx={{ transform: "translate(1.5873015873015872vw, -3vw)" }}>
-                                            {items && items.map((Comment: any) => (
-                                                <Grid item key={Comment.id}>
-                                                    <Card sx={{ border: 1, borderRadius: '50px' }}>
-                                                        <ListItem alignItems="flex-start">
-                                                            <ListItemAvatar>
-                                                                <Avatar alt="?" src="/static/images/avatar/1.jpg" />
-                                                            </ListItemAvatar>
-                                                            <ListItemText
-                                                                primary={Comment.commenterName}
-                                                                secondary={
-                                                                    <React.Fragment>
-                                                                        <Typography
-                                                                            sx={{ display: 'inline' }}
-                                                                            component="span"
-                                                                            variant="body2"
-                                                                            color="text.primary"
-                                                                        >
-                                                                        </Typography>
-                                                                        {Comment.text}
-                                                                    </React.Fragment>
-                                                                }
-                                                            />
-                                                        </ListItem>
-                                                    </Card>
-                                                </Grid>
-                                            ))}
+                                </Box>}
+                                <Grid container spacing={0.5} sx={{ transform: "translate(1.5873015873015872vw, -3vw)", paddingTop: '5vh' }}>
+                                    {items && items.map((Comment: any) => (
+                                        <Grid item key={Comment.id}>
+                                            <Card sx={{ border: 1, borderRadius: '50px' }}>
+                                                <ListItem alignItems="flex-start">
+                                                    <ListItemAvatar>
+                                                        <Avatar alt="?" src="/static/images/avatar/1.jpg" />
+                                                    </ListItemAvatar>
+                                                    <ListItemText
+                                                        primary={Comment.commenterName}
+                                                        secondary={
+                                                            <React.Fragment>
+                                                                <Typography
+                                                                    sx={{ display: 'inline' }}
+                                                                    component="span"
+                                                                    variant="body2"
+                                                                    color="text.primary"
+                                                                >
+                                                                </Typography>
+                                                                {Comment.text}
+                                                            </React.Fragment>
+                                                        }
+                                                    />
+                                                </ListItem>
+                                            </Card>
+                                        </Grid>
+                                    ))}
                                 </Grid>
                                 < Divider variant="inset" component="li" />
                             </List>
