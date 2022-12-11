@@ -10,6 +10,7 @@ import { NewPost } from './pages/NewPost';
 import { EditPost } from './pages/EditPost';
 import { YourPosts } from './pages/YourPosts';
 import { ReadPage } from './pages/ReadPage';
+import { LogOut } from './pages/LogOut';
 import AppBar from '@mui/material/AppBar';
 import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
@@ -27,9 +28,9 @@ function App() {
   const handleLogout = () => {
     localStorage.removeItem("USER");
     setUser(null);
-    navigate("/");
-  }
+    navigate("/logout");
 
+  }
   //checks if the token is expired
   window.onload = () => {
     if (user) {
@@ -57,9 +58,10 @@ function App() {
 
         <Toolbar sx={{ display: "flex", flexDirection: "row", flexWrap: 'wrap', transform: "translate(0vh, -1vh)", borderBottomColor: "#f7b500", borderBottomStyle: "dashed" }}>
 
-          <Link variant="h6" color="inherit" component={RouterLink} to="/" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -1vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}>
+          <Link variant="h6" color="inherit" component={RouterLink}  to={user ?  "/home" : "/"} underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -1vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}>
             <img className="stickerM" src={require('./stickers/nootnoot.png')} alt="oops" />NOOTER
           </Link>
+
           {
             user && <Link className='taskhover' component={RouterLink} to="/newpost" underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-40vw, 1.3vh)" }}>
               <PostAddIcon sx={{ color: "white" }} />
@@ -91,7 +93,8 @@ function App() {
       </AppBar>
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/logout" element={<LogOut />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/passwordreset" element={<PasswordReset />} />
