@@ -74,7 +74,7 @@ export function EditPost() {
                 })
             };
             fetch('https://localhost:7018/api/articles/' + id.get("id"), requestOptions)
-                .then(() => navigate('/yourposts'))
+                .then(() => navigate("/yourposts/user?id=" + user.userId))
 
                 Swal.fire({
                     title: 'Good job!',

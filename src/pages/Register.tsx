@@ -44,7 +44,7 @@ export function Register() {
                     console.log(response)
                     Swal.fire({
                         title: 'Error!',
-                        text: 'Something was wrong',
+                        text: 'Use upper and lowercase letters, numbers and symbols for your password',
                         icon: 'error',
                         confirmButtonText: 'OK'
                     });
