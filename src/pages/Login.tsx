@@ -37,7 +37,7 @@ export function Login() {
                         .then((result) => {
                             localStorage.setItem("USER", JSON.stringify(result));
                         })
-                        .then(() => window.location.href = "/")
+                        .then(() => window.location.href = "/home")
                 }
                 else {
                     console.log(response)
