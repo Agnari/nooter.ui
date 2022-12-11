@@ -17,12 +17,12 @@ export function EditPost() {
 
     const Swal = require('sweetalert2');
     const navigate = useNavigate();
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
-    const [imageURL,setImageURL] = useState("");
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
+    const [imageURL,setImageURL] = useState('');
 
     useEffect(() => {
-        fetch("https://localhost:7018/api/comments/" + id.get("id"))
+        fetch("https://localhost:7018/api/articles/" + id.get("id"))
             .then(res => res.json())
             .then(
                 (result) => {
