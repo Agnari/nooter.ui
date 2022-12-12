@@ -19,7 +19,6 @@ import PostAddIcon from '@mui/icons-material/PostAdd';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
 import { useState } from "react";
 import { Link as RouterLink } from 'react-router-dom';
-import { Greeting } from './pages/Greeting';
 
 function App() {
   const userStr = localStorage.getItem("USER");
@@ -76,7 +75,7 @@ function App() {
               Stuff
             </Link>
           }
-          { window.location.pathname !== "/" &&
+          {
             !user && <Button component={RouterLink} to="/login" variant="contained" sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', my: 1, mx: 1.5, backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", left: 20, filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }}>
               Login
             </Button>
@@ -94,7 +93,6 @@ function App() {
       </AppBar>
 
       <Routes>
-        <Route path="/" element={<Greeting />} />
         <Route path="/home" element={<Home />} />
         <Route path="/logout" element={<LogOut />} />
         <Route path="/login" element={<Login />} />
