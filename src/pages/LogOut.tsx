@@ -4,21 +4,24 @@ import Swal from 'sweetalert2'
 
 export function LogOut(){
 
+  setTimeout(() => {
+    Swal.fire({
+      title: 'You have successfully logged out!',
+      showConfirmButton: false,
+      position: 'center',
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
+  }, 0);
+
+
     setTimeout(() => {
         window.location.href = "/";
       }, 1000);
-
-        Swal.fire({
-            title: 'You have successfully logged out!',
-            showConfirmButton: false,
-            position: 'center',
-            showClass: {
-              popup: 'animate__animated animate__fadeInDown'
-            },
-            hideClass: {
-              popup: 'animate__animated animate__fadeOutUp'
-            }
-          });
 
     return( 
 
