@@ -34,7 +34,6 @@ export function Greeting(){
                                 title="Image title"
                             />
                             
-
 <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -51,15 +50,12 @@ export function Greeting(){
          onClick=
          {logIn}
           sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }} size="large" variant="contained">Login</Button>
-
         <Button
          onClick=
          {readArticles}
           sx={{ maxWidth: '9vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }} size="large" variant="contained">Read articles</Button>
-
 </div>
 </Container>
 </Box>
  );
-
 }
