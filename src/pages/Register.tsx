@@ -38,7 +38,7 @@ export function Register() {
                         confirmButtonText: 'OK'
                     });
                     return response.json()
-                        .then(() => navigate('/'))
+                        .then(() => navigate('/login'))
                 }
                 else {
                     console.log(response)

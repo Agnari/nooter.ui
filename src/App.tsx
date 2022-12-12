@@ -59,7 +59,7 @@ function App() {
 
         <Toolbar sx={{ display: "flex", flexDirection: "row", flexWrap: 'wrap', transform: "translate(0vh, -1vh)", borderBottomColor: "#f7b500", borderBottomStyle: "dashed" }}>
 
-          <Link variant="h6" color="inherit" component={RouterLink}  to={user ?  "/home" : "/"} underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -1vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}>
+          <Link variant="h6" color="inherit" component={RouterLink}  to="/home" underline="none" noWrap sx={{ flexGrow: 1, fontFamily: "Cabin Sketch", color: "white", fontSize: 27, transform: "translate(1vw, -1vh)", filter: "drop-shadow(3px 3px 3px #3d3d3d)" }}>
             <img className="stickerM" src={require('./stickers/nootnoot.png')} alt="oops" />NOOTER
           </Link>
 

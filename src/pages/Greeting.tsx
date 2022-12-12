@@ -11,7 +11,7 @@ export function Greeting(){
     navigate("/login");
   }
 
-  const signIn = () => {
+  const signUp = () => {
     navigate("/register");
   }
 
@@ -44,8 +44,8 @@ export function Greeting(){
 
         <Button
          onClick=
-           {signIn}
-         sx={{ maxWidth: '18vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }}  size="large" variant="contained">Sign in</Button>
+           {signUp}
+         sx={{ maxWidth: '18vw', maxHeight: '5.9vh', minWidth: '7vw', minHeight: '5.9vh', backgroundColor: "#A97637", color: "white", borderRadius: 3, fontFamily: "Righteous", filter: "drop-shadow(0px 1.5px 1.5px #404040)", transform: "translate(0vw, 0.4vh)" }}  size="large" variant="contained">Sign up</Button>
 
         <Button
          onClick=
