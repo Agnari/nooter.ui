@@ -55,7 +55,7 @@ export function NewPost() {
             var link;
 
             if (data.get('photo') === '') {
-                link = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrFhmYdSEADE38XKSaXSNMa9qLWvUzSwkEYg&usqp=CAU";
+                link = "https://m.media-amazon.com/images/M/MV5BZDk4OWIxYzYtNzdmNC00MjA0LTkzNjAtNGNlNDE5ZWI3YWYzXkEyXkFqcGdeQXVyMzYwOTgxNTY@._V1_FMjpg_UX1000_.jpg";
             }
             else {
                 link = data.get('photo');
