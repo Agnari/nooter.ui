@@ -85,9 +85,9 @@ export function NewPost() {
     return (
         <Container>
             <Box component="form" noValidate onSubmit={handleSubmit}>
-            <Container sx={{ display: "flex", flexDirection: "row", gap: "15vw" }}>
-                
-                    <TextField sx={{width:"50vw", marginTop:"3vh"}}
+                <Container sx={{ display: "flex", flexDirection: "row", gap: "13vw" }}>
+                    <Container>
+                    <TextField sx={{ width: "50vw", marginTop: "3vh", padding:1, background:"white", borderRadius:10 }}
                         margin="normal"
                         variant="standard"
                         required
@@ -95,52 +95,43 @@ export function NewPost() {
                         id="title"
                         placeholder="Give your post a title!"
                         name='title'
-                        InputProps={{ disableUnderline: true, style: { textAlign:"center", fontFamily: "Righteous" } }}/>
-                <h2>Author name</h2>
-            </Container>
-            <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
-                <Container style={{ background: 'white', borderRadius:3 }} sx={{ width: "60vw", height: "60vh" }}>
-                    <Container maxWidth="md">
-
-                        <h2 style={{ fontFamily: "Righteous" }}> Add post </h2>
-
-                            <Box sx={{
-                                marginTop: 8,
-                                display: 'flex',
-                                flexDirection: 'column',
-                                alignItems: 'center',
-                            }}>
-                                <Box sx={{ mt: 1 }}>
-                                    <TextField sx={{ width: "40vw", bottom: "5vh" }}
-                                        placeholder="Write something here..."
-                                        id="body"
-                                        name='body'
-                                        multiline
-                                        fullWidth
-                                        rows={12}
-                                        inputProps={{ style: { fontFamily: "Righteous" } }} />
-                            </Box>
-                        </Box>
-                    </Container>
-
+                        InputProps={{ disableUnderline:true, style: { textAlign: "center", fontFamily: "Righteous", color:"black" } }} />
+                        </Container>
+                    <h2 style={{fontFamily:"Calligraffiti, cursive", color:"graphite"}}>Author: Me</h2>
                 </Container>
-                <TextField sx={{ maxHeight: "40vh", background: "white", borderRadius:2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
-                    margin="normal"
-                    required
-                    multiline
-                    rows={12}
-                    fullWidth
-                    id="photo"
-                    placeholder="Wanna add an image? Add an URL!"
-                    name='photo'
-                    inputProps={{ style: { textAlign: "center", fontFamily: "Righteous" } }} />
-                <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right:"10vw", borderRadius:20, backgroundColor:"darkorange", filter:"drop-shadow(3px 3px 3px grey)" }}
-                    type="submit"
-                    variant="contained"
-                    size="large">
-                    Done!
-                </Button>
-            </Container>
+                <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
+                    <Container style={{ background: 'white', borderRadius: 3 }} sx={{ width: "60vw", height: "68vh", transform:"translate(0, -5vh)" }}>
+                        <Container maxWidth="md">
+                            <h2 style={{ fontFamily: "Righteous" }}> Add post </h2>
+                            <TextField sx={{ width: "40vw" }}
+                                placeholder="Write something here..."
+                                id="body"
+                                name='body'
+                                variant="standard"
+                                multiline
+                                fullWidth
+                                rows={12}
+                                InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous" } }} />
+                        </Container>
+                    </Container>
+                    <TextField sx={{ background: "white", borderRadius: 2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
+                        margin="normal"
+                        required
+                        multiline
+                        rows={12}
+                        fullWidth
+                        variant="standard"
+                        id="photo"
+                        placeholder="Wanna add an image? Add an URL!"
+                        name='photo'
+                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", height: "45vh", padding: 10, paddingTop: "20vh" } }} />
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "10vw", borderRadius: 20, backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
+                        type="submit"
+                        variant="contained"
+                        size="large">
+                        Done!
+                    </Button>
+                </Container>
             </Box>
         </Container>
     )
