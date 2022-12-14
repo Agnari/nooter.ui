@@ -84,9 +84,10 @@ export function NewPost() {
 
     return (
         <Container>
+            <Box component="form" noValidate onSubmit={handleSubmit}>
             <Container sx={{ display: "flex", flexDirection: "row", gap: "15vw" }}>
-                <Box component="form" noValidate onSubmit={handleSubmit}>
-                    <TextField sx={{width:"50vw", background:"white", marginTop:"3vh", borderRadius:10}}
+                
+                    <TextField sx={{width:"50vw", marginTop:"3vh"}}
                         margin="normal"
                         variant="standard"
                         required
@@ -94,17 +95,15 @@ export function NewPost() {
                         id="title"
                         placeholder="Give your post a title!"
                         name='title'
-                        inputProps={{ style: { textAlign: "center", fontFamily: "Righteous" } }} />
-                </Box>
+                        InputProps={{ disableUnderline: true, style: { textAlign:"center", fontFamily: "Righteous" } }}/>
                 <h2>Author name</h2>
             </Container>
             <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
-                <Container className="paperStack" style={{ background: 'white' }} sx={{ width: "60vw", height: "60vh", transform: "translate(0, -10vh)" }}>
+                <Container style={{ background: 'white', borderRadius:3 }} sx={{ width: "60vw", height: "60vh" }}>
                     <Container maxWidth="md">
 
                         <h2 style={{ fontFamily: "Righteous" }}> Add post </h2>
 
-                        <Box component="form" noValidate onSubmit={handleSubmit}>
                             <Box sx={{
                                 marginTop: 8,
                                 display: 'flex',
@@ -120,13 +119,12 @@ export function NewPost() {
                                         fullWidth
                                         rows={12}
                                         inputProps={{ style: { fontFamily: "Righteous" } }} />
-                                </Box>
                             </Box>
                         </Box>
                     </Container>
 
                 </Container>
-                <TextField sx={{ maxHeight: "40vh", background: "white", width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
+                <TextField sx={{ maxHeight: "40vh", background: "white", borderRadius:2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
                     margin="normal"
                     required
                     multiline
@@ -136,12 +134,14 @@ export function NewPost() {
                     placeholder="Wanna add an image? Add an URL!"
                     name='photo'
                     inputProps={{ style: { textAlign: "center", fontFamily: "Righteous" } }} />
-                <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right:"10vw" }}
+                <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right:"10vw", borderRadius:20, backgroundColor:"darkorange", filter:"drop-shadow(3px 3px 3px grey)" }}
                     type="submit"
-                    variant="contained">
+                    variant="contained"
+                    size="large">
                     Done!
                 </Button>
             </Container>
+            </Box>
         </Container>
     )
 
