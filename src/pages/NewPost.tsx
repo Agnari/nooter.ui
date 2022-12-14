@@ -55,7 +55,7 @@ export function NewPost() {
             var link;
 
             if (data.get('photo') === '') {
-                link = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrFhmYdSEADE38XKSaXSNMa9qLWvUzSwkEYg&usqp=CAU";
+                link = "https://m.media-amazon.com/images/M/MV5BZDk4OWIxYzYtNzdmNC00MjA0LTkzNjAtNGNlNDE5ZWI3YWYzXkEyXkFqcGdeQXVyMzYwOTgxNTY@._V1_FMjpg_UX1000_.jpg";
             }
             else {
                 link = data.get('photo');
@@ -83,70 +83,66 @@ export function NewPost() {
     }
 
     return (
-        <Container style={{ background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat: "no-repeat", backgroundSize: "cover" }} sx={{ width: "87vw", border: 5, transform: "translate(0vw, 7vh)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "double", filter: "drop-shadow(5px 5px 5px black)", height: "81vh" }}>
-
-            <img src={require("../stickers/fuqno.png")} style={{ height: '7.936507936507937vw', width: '7.936507936507937vw', filter: "drop-shadow(3px 3px 3px black)", transform: "translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)" }} />
-            <img src={require("../stickers/anber.png")} style={{ height: '7.936507936507937vw', width: '7.936507936507937vw', filter: "drop-shadow(-3px 3px -3px black)", transform: "translate(70vw, -5vh) rotate(-45deg)", }} />
-            <Container maxWidth="md" sx={{ transform: "translate(0vw, -14.727540500736376vh)" }}>
-
-                <h2 style={{ fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Add post </h2>
-
-                <Box component="form" noValidate onSubmit={handleSubmit}>
-                    <Box sx={{
-                        marginTop: 8,
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'center',
-                        transform: "translate(0px, -11.782032400589102vh)"
-                    }}
-                    >
-                        <Box sx={{ mt: 1, width: "70vw", paddingTop: '5vh' }}>
-
-                            <TextField sx={{ background: "url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform: "rotate(-0.4deg)", filter: "drop-shadow(-1px 1px 1px black)", width: "70vw", height: "4.5vh" }}
-                                margin="normal"
-                                variant="standard"
-                                required
-                                fullWidth
-                                id="title"
-                                placeholder="Give your post a title!"
-                                name='title'
-                                inputProps={{ style: { fontFamily: "Righteous", textAlign: "center" } }}
-
-                            />
-                            <TextField sx={{ background: "url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", filter: "drop-shadow(-1px 1px 1px black)" }}
-                                placeholder="Write something here..."
-                                id="body"
-                                name='body'
-                                multiline
-                                fullWidth
-                                rows={12}
-                                inputProps={{ style: { fontFamily: "Righteous", width: '55.55555555555556vw', height: '23.8vw' } }}
-                            />
-                            <Button
-                                type="submit"
-                                variant="contained"
-                                sx={{ fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", border: 2, borderColor: "white", borderStyle: "double", transform: "rotate(2deg)", marginBottom: 3, left: "65vw", top: "5vw", maxWidth: "7vw", maxHeight: "5.9vh", minWidth: "7vw", minHeight: "6.5vh" }}>
-                                Submit
-                            </Button>
-                                
-                        </Box>
-                    </Box>
-                    <TextField sx={{ background: "url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform: "translate(5vw, -6.5vh)", filter: "drop-shadow(-1px 1px 1px black)", width: "25vw", height: "4.5vh", top: "-6vw", left: "15vw", border: 1, borderRadius: '16px' }}
-                                    margin="normal"
-                                    variant="standard"
-                                    required
-                                    fullWidth
-                                    id="photo"
-                                    placeholder="Add image URL!"
-                                    name='photo'
-                                    inputProps={{ style: { fontFamily: "Righteous", textAlign: "center" } }}
-
-                                />
-                </Box>
+        <Container>
+            <Box component="form" noValidate onSubmit={handleSubmit}>
+            <Container sx={{ display: "flex", flexDirection: "row", gap: "15vw" }}>
+                
+                    <TextField sx={{width:"50vw", marginTop:"3vh"}}
+                        margin="normal"
+                        variant="standard"
+                        required
+                        fullWidth
+                        id="title"
+                        placeholder="Give your post a title!"
+                        name='title'
+                        InputProps={{ disableUnderline: true, style: { textAlign:"center", fontFamily: "Righteous" } }}/>
+                <h2>Author name</h2>
             </Container>
+            <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
+                <Container style={{ background: 'white', borderRadius:3 }} sx={{ width: "60vw", height: "60vh" }}>
+                    <Container maxWidth="md">
 
+                        <h2 style={{ fontFamily: "Righteous" }}> Add post </h2>
+
+                            <Box sx={{
+                                marginTop: 8,
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center',
+                            }}>
+                                <Box sx={{ mt: 1 }}>
+                                    <TextField sx={{ width: "40vw", bottom: "5vh" }}
+                                        placeholder="Write something here..."
+                                        id="body"
+                                        name='body'
+                                        multiline
+                                        fullWidth
+                                        rows={12}
+                                        inputProps={{ style: { fontFamily: "Righteous" } }} />
+                            </Box>
+                        </Box>
+                    </Container>
+
+                </Container>
+                <TextField sx={{ maxHeight: "40vh", background: "white", borderRadius:2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
+                    margin="normal"
+                    required
+                    multiline
+                    rows={12}
+                    fullWidth
+                    id="photo"
+                    placeholder="Wanna add an image? Add an URL!"
+                    name='photo'
+                    inputProps={{ style: { textAlign: "center", fontFamily: "Righteous" } }} />
+                <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right:"10vw", borderRadius:20, backgroundColor:"darkorange", filter:"drop-shadow(3px 3px 3px grey)" }}
+                    type="submit"
+                    variant="contained"
+                    size="large">
+                    Done!
+                </Button>
+            </Container>
+            </Box>
         </Container>
-
     )
 
 }
