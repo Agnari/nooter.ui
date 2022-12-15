@@ -125,7 +125,7 @@ export function NewPost() {
                         placeholder="Wanna add an image? Add an URL!"
                         name='photo'
                         InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", height: "45vh", padding: 10, paddingTop: "20vh" } }} />
-                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "10vw", borderRadius: 20, backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
                         type="submit"
                         variant="contained"
                         size="large">

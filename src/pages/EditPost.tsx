@@ -19,7 +19,7 @@ export function EditPost() {
     const navigate = useNavigate();
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-    const [imageURL,setImageURL] = useState('');
+    const [imageURL, setImageURL] = useState('');
 
     useEffect(() => {
         fetch("https://localhost:7018/api/articles/" + id.get("id"))
@@ -43,29 +43,29 @@ export function EditPost() {
         });
 
         const token = getToken();
-        if (data.get('title') === ''){
+        if (data.get('title') === '') {
             Swal.fire({
                 title: 'Error!',
                 text: 'Title is missing',
                 icon: 'error',
                 confirmButtonText: 'OK'
-              });
+            });
         }
-        else if (data.get('body') === ''){
+        else if (data.get('body') === '') {
             Swal.fire({
                 title: 'Error!',
                 text: 'Text is missing',
                 icon: 'error',
                 confirmButtonText: 'OK'
-              });
+            });
         }
-        else{
+        else {
             const requestOptions = {
                 method: 'PUT',
                 headers: {
                     'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
-                  },
+                },
                 body: JSON.stringify({
                     title: data.get('title'),
                     body: data.get('body'),
@@ -76,82 +76,74 @@ export function EditPost() {
             fetch('https://localhost:7018/api/articles/' + id.get("id"), requestOptions)
                 .then(() => navigate("/yourposts/user?id=" + user.userId))
 
-                Swal.fire({
-                    title: 'Good job!',
-                    text: 'Article was changed!',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
-                  });
+            Swal.fire({
+                title: 'Good job!',
+                text: 'Article was changed!',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            });
         }
     }
 
     return (
+        <Container>
+            <Box component="form" noValidate onSubmit={handleSubmit}>
+                <Container sx={{ display: "flex", flexDirection: "row", gap: "13vw" }}>
+                    <Container>
+                    <TextField sx={{ width: "50vw", marginTop: "3vh", padding:1, background:"white", borderRadius:10 }}
+                            id="title"
+                            name="title"
+                            margin="normal"
+                            variant="standard"
+                            placeholder="Change Post Title..."
+                            fullWidth
+                            required
+                            value={title}
+                            onChange={event => setTitle(event.target.value)}
+                            inputProps={{ style: { fontFamily: "Righteous" } }}
+                            InputLabelProps={{ style: { fontFamily: "Righteous" } }} />
+                    </Container>
+                    <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
+                        <Container style={{ background: 'white', borderRadius: 3 }} sx={{ width: "60vw", height: "68vh", transform: "translate(0, -5vh)" }}>
+                            <Container maxWidth="md">
 
-        <Container style={{background: "url(https://www.tilingtextures.com/wp-content/uploads/2018/11/0068-1-512x512.jpg)", backgroundRepeat:"no-repeat", backgroundSize:"cover"}} sx={{width:"87%", border:5, transform:"translate(0vw, 7vh)", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", borderStyle: "dashed", filter:"drop-shadow(5px 5px 5px black)"}}>
-        <img src={require("../stickers/fuqno.png")} style={{height:'7.936507936507937vw', width:'7.936507936507937vw', filter:"drop-shadow(3px 3px 3px black)", transform:"translate(-4.761904761904762vw, -5.154639175257732vh) rotate(45deg)"}}/> 
-        <img src={require("../stickers/anber.png")} style={{height:'7.936507936507937vw', width:'7.936507936507937vw', filter:"drop-shadow(-3px 3px -3px black)", transform:"translate(70vw, -5vh) rotate(-45deg)"}}/> 
-                <Container component="form" noValidate onSubmit={handleSubmit} maxWidth="md" sx={{ transform:"translate(0vw, -14.727540500736376vh)", marginBottom:-10, width:"70vw"}}>
-                <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}>Edit Post</h2>
+                            <TextField sx={{ width: "40vw" }}
+                                    id="body"
+                                    name="body"
+                                    placeholder="Write something again!"
+                                    value={body}
+                                    onChange={event => setBody(event.target.value)}
+                                    multiline
+                                    fullWidth
+                                    rows={12}
+                                    inputProps={{ style: { fontFamily: "Righteous" } }}
+                                    InputLabelProps={{ style: { fontFamily: "Righteous" } }} />
+                            </Container>
+                        </Container>
+                        <Button
+                            type="submit"
+                            fullWidth
+                            variant="contained"
+                            sx={{ mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", top: "4vw", }}
+                        >
+                            Submit Changes
+                        </Button>
 
-                    <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-1deg)"}}
-                        id="title"
-                        name="title"
-                        margin="normal"
-                        variant="standard"
-                        placeholder="Change Post Title..."
-                        fullWidth
-                        required
-                        value={title}
-                        onChange={event => setTitle(event.target.value)}
-                        inputProps={{style:{fontFamily: "Righteous"}}}
-                        InputLabelProps={{style:{fontFamily: "Righteous"}}}
+                        <TextField sx={{ background: "white", borderRadius: 2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
+                            margin="normal"
+                            variant="standard"
+                            required
+                            fullWidth
+                            id="photo"
+                            placeholder="Enter URL!"
+                            name='photo'
+                            value={imageURL}
+                            onChange={event => setImageURL(event.target.value)}
+                            inputProps={{ style: { fontFamily: "Righteous", textAlign: "center" } }} />
 
-                    />
-            <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(-2deg)"}}
-                        id="body"
-                        name="body"
-                        placeholder="Write something again!"
-                        value={body}
-                        onChange={event => setBody(event.target.value)}
-                        multiline
-                        fullWidth
-                        rows={12}
-                        inputProps={{ style: { fontFamily: "Righteous" } }}
-                        InputLabelProps={{ style: { fontFamily: "Righteous" } }}
-                    />
-                    <Grid container>
-                        <Grid item xs></Grid>
-                        <Grid item>
-                            <Button
-                                type="submit"
-                                fullWidth
-                                variant="contained"
-                                sx={{ mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%",top:"4vw", }}
-                                >
-                                Submit Changes
-                            </Button>
-
-                        </Grid>
-
-                    
-                    </Grid>
-
-                    <h2 style={{fontFamily: "Calligraffitti, cursive", fontSize: 30 }}> Change image's URL: </h2>
-
-                    <TextField sx={{background:"url(https://img.freepik.com/free-photo/white-crumpled-paper-texture-background-design-space-white-tone_1258-78696.jpg?w=1800&t=st=1668364849~exp=1668365449~hmac=4f3352146117b55bd624ed922e88d5913590fe62d3eeaa38fbae504457d6644b)", transform:"rotate(0deg)", filter:"drop-shadow(-1px 1px 1px black)", width:"25vw", height:"4.5vh",top:"-6vw", left:"17vw",border: 1}}
-                    margin="normal"
-                    variant="standard"
-                    required
-                    fullWidth
-                    id="photo"
-                    placeholder="Enter URL!"
-                    name = 'photo'
-                    value={imageURL}
-                    onChange={event => setImageURL(event.target.value)}
-                    inputProps={{style:{fontFamily: "Righteous", textAlign:"center"}}}
-
-                    />
+                    </Container>
                 </Container>
-            </Container>
+            </Box>
+        </Container>
     )
 }
