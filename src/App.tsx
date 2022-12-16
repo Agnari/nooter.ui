@@ -73,7 +73,7 @@ function App() {
             user && <Link className='taskhover' component={RouterLink} to={`/yourposts/user?id=${user.userId}`} underline="none" sx={{ fontFamily: "Cabin Sketch", color: "white", fontSize: "24px", transform: "translate(-25vw, 1.3vh)" }}>
               <DynamicFeedIcon sx={{ color: "white" }} />
 
-              Stuff
+              Your Stuff
             </Link>
           }
           { window.location.pathname !== "/" &&
