@@ -7,7 +7,7 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import { Link as RouterLink} from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 export function Register() {
 
@@ -107,9 +107,7 @@ export function Register() {
                             fullWidth
                             variant="contained"
 
-                            sx={{ mt: 3, mb: 2, backgroundColor: "#59260B", border: 2, borderStyle: 'groove', borderColor: '#2b1204', fontFamily: "Cabin Sketch", color: "white", fontSize: 20 }}
-
-                        >
+                            sx={{ mt: 3, mb: 2, backgroundColor: "#59260B", border: 2, borderStyle: 'groove', borderColor: '#2b1204', fontFamily: "Cabin Sketch", color: "white", fontSize: 20 }}>
                             Sign Up
                         </Button>
                         <Grid container justifyContent="flex-end">

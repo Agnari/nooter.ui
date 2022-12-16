@@ -5,7 +5,6 @@ import { Routes, Route, useNavigate } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Login } from './pages/Login';
 import { Register } from './pages/Register';
-import { PasswordReset } from './pages/PasswordReset';
 import { NewPost } from './pages/NewPost';
 import { EditPost } from './pages/EditPost';
 import { YourPosts } from './pages/YourPosts';
@@ -100,7 +99,6 @@ function App() {
         <Route path="/logout" element={<LogOut />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/passwordreset" element={<PasswordReset />} />
         <Route path="/newpost" element={<NewPost />} />
         <Route path="/editpost/:article" element={<EditPost />} />
         <Route path="/yourposts/:user" element={<YourPosts />} />
