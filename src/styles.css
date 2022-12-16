@@ -130,6 +130,7 @@ CheckCircleOutlineIcon {
 .doit:after {
   content: "Wanna Sign up?";
   width: 30px;
+  text-decoration:underline;
 }
 
 .doit:hover:after {
