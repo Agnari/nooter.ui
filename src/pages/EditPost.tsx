@@ -85,7 +85,7 @@ export function EditPost() {
         }
     }
 
-        return (
+    return (
         <Container>
             <Box component="form" noValidate onSubmit={handleSubmit}>
                 <Container>
@@ -94,9 +94,9 @@ export function EditPost() {
                         variant="standard"
                         required
                         fullWidth
+                        id="title"
                         value={title}
                         onChange={event => setTitle(event.target.value)}
-                        id="title"
                         placeholder="Give your post a title!"
                         name='title'
                         InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", color: "black" } }} />
@@ -108,30 +108,32 @@ export function EditPost() {
                             <TextField 
                                 id="body"
                                 name='body'
+                                value={body}
+                                onChange={event => setBody(event.target.value)}
                                 variant="standard"
                                 size="medium"
                                 multiline
-                                value={body}
-                                onChange={event => setBody(event.target.value)}
                                 fullWidth
                                 rows={22}
                                 InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous", textDecoration:"underline", textDecorationColor:"#cecece", color:"grey" } }} />
                         </Container>
                     </Container>
-                    <TextField sx={{ background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)" }}
+                    <Container sx={{background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)", display:"inline-flex"}}>
+                    <TextField
                         margin="normal"
                         required
                         multiline
-                        rows={12}
+                        rows={10}
                         fullWidth
-                        value={imageURL}
-                        onChange={event => setImageURL(event.target.value)}
                         variant="standard"
                         id="photo"
+                        value={imageURL}
+                        onChange={event => setImageURL(event.target.value)}
                         placeholder="Wanna add an image? Add an URL!"
                         name='photo'
                         InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Cabin Sketch", fontWeight: "bold", textDecoration:"underline", textDecorationStyle:"dashed", textDecorationColor:"grey", height: "45vh", padding: 10 } }} />
-                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "10vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)", padding:3.4 }}
+                        </Container>
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", padding:4, fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
                         type="submit"
                         variant="contained"
                         size="large">

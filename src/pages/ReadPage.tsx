@@ -28,7 +28,8 @@ export function ReadPage() {
     return (
         <>
             <main>
-                <Box sx={{ m: 10 }}>
+                <Container sx={{display:"flex", flexDirection:"column", gap:5}}>
+                <Box sx={{ marginTop:2}}>
                     <Container sx={{maxWidth:'95vw', width:'90vw', align:'center'}}>
 
                         <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, white, lightgrey)" }}>
@@ -40,17 +41,17 @@ export function ReadPage() {
                                 image={imageURL}
                                 title="Image title"
                             />
-                            <CardContent sx={{ size: "fixed", marginLeft: 5 }}>
+                            <CardContent sx={{ size: "fixed" }}>
                                 <Typography variant="h2" align="center" sx={{ overflowWrap: "break-word", fontFamily: "Righteous" }}>
                                     {title}
                                 </Typography>
                                 <Typography gutterBottom align="center">
                                     _________________________________________________________________________
                                 </Typography>
-                                <Typography paragraph align="left" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "Roboto" }}>
+                                <Typography paragraph align="left" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "Righteous" }}>
                                     {body}
                                 </Typography>
-                                <Typography paragraph align="right" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "" }}>
+                                <Typography paragraph align="right" sx={{ overflowWrap: "break-word", display: "block", fontFamily: "Cabin Sketch", color:"black", textDecoration:"underline", textDecorationStyle:"wavy", textDecorationColor:"grey", fontSize:20 }}>
                                     Posted by: {author}
                                 </Typography>
                             </CardContent>
@@ -58,6 +59,7 @@ export function ReadPage() {
                     </Container>
                 </Box>
                 <Comments/>
+                </Container>
             </main>
         </>
     );

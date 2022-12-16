@@ -111,18 +111,20 @@ export function NewPost() {
                                 InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous", textDecoration:"underline", textDecorationColor:"#cecece", color:"grey" } }} />
                         </Container>
                     </Container>
-                    <TextField sx={{ background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)" }}
+                    <Container sx={{background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)", display:"inline-flex"}}>
+                    <TextField
                         margin="normal"
                         required
                         multiline
-                        rows={12}
+                        rows={10}
                         fullWidth
                         variant="standard"
                         id="photo"
                         placeholder="Wanna add an image? Add an URL!"
                         name='photo'
                         InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Cabin Sketch", fontWeight: "bold", textDecoration:"underline", textDecorationStyle:"dashed", textDecorationColor:"grey", height: "45vh", padding: 10 } }} />
-                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
+                        </Container>
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", padding:4, fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
                         type="submit"
                         variant="contained"
                         size="large">
