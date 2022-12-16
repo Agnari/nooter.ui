@@ -85,9 +85,8 @@ export function NewPost() {
     return (
         <Container>
             <Box component="form" noValidate onSubmit={handleSubmit}>
-                <Container sx={{ display: "flex", flexDirection: "row", gap: "13vw" }}>
-                    <Container>
-                    <TextField sx={{ width: "50vw", marginTop: "3vh", padding:1, background:"white", borderRadius:10 }}
+                <Container>
+                    <TextField sx={{ width: "50vw", marginTop: "3vh", left:"20vw", padding: 1, filter:"box-shadow(2px 3px 20px black, 0 0 60px #8a4d0f inset)", background: "#fffef0", border: 1, borderStyle: "dashed"}}
                         margin="normal"
                         variant="standard"
                         required
@@ -95,26 +94,24 @@ export function NewPost() {
                         id="title"
                         placeholder="Give your post a title!"
                         name='title'
-                        InputProps={{ disableUnderline:true, style: { textAlign: "center", fontFamily: "Righteous", color:"black" } }} />
-                        </Container>
-                    <h2 style={{fontFamily:"Calligraffiti, cursive", color:"graphite"}}>Author: Me</h2>
+                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", color: "black" } }} />
                 </Container>
                 <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
-                    <Container style={{ background: 'white', borderRadius: 3 }} sx={{ width: "60vw", height: "68vh", transform:"translate(0, -5vh)" }}>
-                        <Container maxWidth="md">
-                            <h2 style={{ fontFamily: "Righteous" }}> Add post </h2>
-                            <TextField sx={{ width: "40vw" }}
-                                placeholder="Write something here..."
+                    <Container style={{ background: "white", border: "2px solid #cecece", borderRadius: 3 }} sx={{ width: "60vw", height: "68vh" }}>
+                        <Container maxWidth="md" sx={{ display: "flex", margin: "auto" }}>
+                            <div style={{ width: "1px", float: "left", height: "67.6vh", marginLeft: "35px", borderLeft: "1px solid green", borderRight: "1px solid green" }}></div>
+                            <TextField 
                                 id="body"
                                 name='body'
                                 variant="standard"
+                                size="medium"
                                 multiline
                                 fullWidth
-                                rows={12}
-                                InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous" } }} />
+                                rows={22}
+                                InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous", textDecoration:"underline", textDecorationColor:"#cecece", color:"grey" } }} />
                         </Container>
                     </Container>
-                    <TextField sx={{ background: "white", borderRadius: 2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
+                    <TextField sx={{ background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)" }}
                         margin="normal"
                         required
                         multiline
@@ -124,8 +121,8 @@ export function NewPost() {
                         id="photo"
                         placeholder="Wanna add an image? Add an URL!"
                         name='photo'
-                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", height: "45vh", padding: 10, paddingTop: "20vh" } }} />
-                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
+                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Cabin Sketch", fontWeight: "bold", textDecoration:"underline", textDecorationStyle:"dashed", textDecorationColor:"grey", height: "45vh", padding: 10 } }} />
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
                         type="submit"
                         variant="contained"
                         size="large">

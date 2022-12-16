@@ -85,65 +85,61 @@ export function EditPost() {
         }
     }
 
-    return (
+        return (
         <Container>
             <Box component="form" noValidate onSubmit={handleSubmit}>
-                <Container sx={{ display: "flex", flexDirection: "row", gap: "13vw" }}>
-                    <Container>
-                    <TextField sx={{ width: "50vw", marginTop: "3vh", padding:1, background:"white", borderRadius:10 }}
-                            id="title"
-                            name="title"
-                            margin="normal"
-                            variant="standard"
-                            placeholder="Change Post Title..."
-                            fullWidth
-                            required
-                            value={title}
-                            onChange={event => setTitle(event.target.value)}
-                            inputProps={{ style: { fontFamily: "Righteous" } }}
-                            InputLabelProps={{ style: { fontFamily: "Righteous" } }} />
-                    </Container>
-                    <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
-                        <Container style={{ background: 'white', borderRadius: 3 }} sx={{ width: "60vw", height: "68vh", transform: "translate(0, -5vh)" }}>
-                            <Container maxWidth="md">
-
-                            <TextField sx={{ width: "40vw" }}
-                                    id="body"
-                                    name="body"
-                                    placeholder="Write something again!"
-                                    value={body}
-                                    onChange={event => setBody(event.target.value)}
-                                    multiline
-                                    fullWidth
-                                    rows={12}
-                                    inputProps={{ style: { fontFamily: "Righteous" } }}
-                                    InputLabelProps={{ style: { fontFamily: "Righteous" } }} />
-                            </Container>
+                <Container>
+                    <TextField sx={{ width: "50vw", marginTop: "3vh", left:"20vw", padding: 1, filter:"box-shadow(2px 3px 20px black, 0 0 60px #8a4d0f inset)", background: "#fffef0", border: 1, borderStyle: "dashed"}}
+                        margin="normal"
+                        variant="standard"
+                        required
+                        fullWidth
+                        value={title}
+                        onChange={event => setTitle(event.target.value)}
+                        id="title"
+                        placeholder="Give your post a title!"
+                        name='title'
+                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", color: "black" } }} />
+                </Container>
+                <Container sx={{ display: "flex", marginTop: "5vh", gap: "50px" }}>
+                    <Container style={{ background: "white", border: "2px solid #cecece", borderRadius: 3 }} sx={{ width: "60vw", height: "68vh" }}>
+                        <Container maxWidth="md" sx={{ display: "flex", margin: "auto" }}>
+                            <div style={{ width: "1px", float: "left", height: "67.6vh", marginLeft: "35px", borderLeft: "1px solid green", borderRight: "1px solid green" }}></div>
+                            <TextField 
+                                id="body"
+                                name='body'
+                                variant="standard"
+                                size="medium"
+                                multiline
+                                value={body}
+                                onChange={event => setBody(event.target.value)}
+                                fullWidth
+                                rows={22}
+                                InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous", textDecoration:"underline", textDecorationColor:"#cecece", color:"grey" } }} />
                         </Container>
-                        <Button
-                            type="submit"
-                            fullWidth
-                            variant="contained"
-                            sx={{ mt: 3, mb: 2, fontFamily: "Calligraffitti", backgroundColor: "#59260B", borderRadius: "50%", top: "4vw", }}
-                        >
-                            Submit Changes
-                        </Button>
-
-                        <TextField sx={{ background: "white", borderRadius: 2, width: "20vw", height: "45vh", marginTop: "5vh", transform: "rotate(5deg)" }}
-                            margin="normal"
-                            variant="standard"
-                            required
-                            fullWidth
-                            id="photo"
-                            placeholder="Enter URL!"
-                            name='photo'
-                            value={imageURL}
-                            onChange={event => setImageURL(event.target.value)}
-                            inputProps={{ style: { fontFamily: "Righteous", textAlign: "center" } }} />
-
                     </Container>
+                    <TextField sx={{ background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)" }}
+                        margin="normal"
+                        required
+                        multiline
+                        rows={12}
+                        fullWidth
+                        value={imageURL}
+                        onChange={event => setImageURL(event.target.value)}
+                        variant="standard"
+                        id="photo"
+                        placeholder="Wanna add an image? Add an URL!"
+                        name='photo'
+                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Cabin Sketch", fontWeight: "bold", textDecoration:"underline", textDecorationStyle:"dashed", textDecorationColor:"grey", height: "45vh", padding: 10 } }} />
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)" }}
+                        type="submit"
+                        variant="contained"
+                        size="large">
+                        Done!
+                    </Button>
                 </Container>
             </Box>
         </Container>
     )
+
 }
