@@ -61,7 +61,7 @@ export function YourPosts() {
     }
 
     return (
-        <Container className="paperStack" maxWidth="md" >
+        <Container className="paperStack" maxWidth="md">
             <h2 className="hover1" style={{ fontFamily: "Cabin Sketch", fontSize: 50, height: 44, width: 300 }}> <DoneOutlineIcon sx={{ color: "black" }} />Your Posts
                 <img className="ducktrigger" src={require("../stickers/wtf.png")} alt="lol no" style={{ height: "30px", width: "30px", transform: "rotate(3deg)" }} />
                 Your Posts
