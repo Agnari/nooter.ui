@@ -1,3 +1,4 @@
+
 .animationshut {
   --s: 16px;
   /* size of the frame */
@@ -126,12 +127,8 @@ CheckCircleOutlineIcon {
   transform: translate(10000px, 10000px);
 }
 
-.doit {
-  margin-bottom: 20vh;
-}
-
 .doit:after {
-  content: "Don't have an account? Sign up!";
+  content: "Wanna Sign up?";
   width: 30px;
 }
 
