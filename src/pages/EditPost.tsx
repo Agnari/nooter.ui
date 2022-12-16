@@ -85,18 +85,18 @@ export function EditPost() {
         }
     }
 
-        return (
+    return (
         <Container>
             <Box component="form" noValidate onSubmit={handleSubmit}>
                 <Container>
-                    <TextField sx={{ width: "50vw", marginTop: "3vh", left:"20vw", padding: 1, filter:"box-shadow(2px 3px 20px black, 0 0 60px #8a4d0f inset)", background: "#fffef0", border: 1, borderStyle: "dashed"}}
+                    <TextField sx={{ width: "50vw", marginTop: "3vh", left: "20vw", padding: 1, filter: "box-shadow(2px 3px 20px black, 0 0 60px #8a4d0f inset)", background: "#fffef0", border: 1, borderStyle: "dashed" }}
                         margin="normal"
                         variant="standard"
                         required
                         fullWidth
+                        id="title"
                         value={title}
                         onChange={event => setTitle(event.target.value)}
-                        id="title"
                         placeholder="Give your post a title!"
                         name='title'
                         InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Righteous", color: "black" } }} />
@@ -105,33 +105,35 @@ export function EditPost() {
                     <Container style={{ background: "white", border: "2px solid #cecece", borderRadius: 3 }} sx={{ width: "60vw", height: "68vh" }}>
                         <Container maxWidth="md" sx={{ display: "flex", margin: "auto" }}>
                             <div style={{ width: "1px", float: "left", height: "67.6vh", marginLeft: "35px", borderLeft: "1px solid green", borderRight: "1px solid green" }}></div>
-                            <TextField 
+                            <TextField
                                 id="body"
                                 name='body'
+                                value={body}
+                                onChange={event => setBody(event.target.value)}
                                 variant="standard"
                                 size="medium"
                                 multiline
-                                value={body}
-                                onChange={event => setBody(event.target.value)}
                                 fullWidth
                                 rows={22}
-                                InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous", textDecoration:"underline", textDecorationColor:"#cecece", color:"grey" } }} />
+                                InputProps={{ disableUnderline: true, style: { fontFamily: "Righteous", textDecoration: "underline", textDecorationColor: "#cecece", color: "grey" } }} />
                         </Container>
                     </Container>
-                    <TextField sx={{ background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter:"drop-shadow(2px 2px 2px grey)" }}
-                        margin="normal"
-                        required
-                        multiline
-                        rows={12}
-                        fullWidth
-                        value={imageURL}
-                        onChange={event => setImageURL(event.target.value)}
-                        variant="standard"
-                        id="photo"
-                        placeholder="Wanna add an image? Add an URL!"
-                        name='photo'
-                        InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Cabin Sketch", fontWeight: "bold", textDecoration:"underline", textDecorationStyle:"dashed", textDecorationColor:"grey", height: "45vh", padding: 10 } }} />
-                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", fontFamily: "Righteous", right: "10vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "darkorange", filter: "drop-shadow(3px 3px 3px grey)", padding:3.4 }}
+                    <Container sx={{ background: "#ccffcc", width: "20vw", height: "35vh", marginTop: "5vh", transform: "rotate(5deg)", filter: "drop-shadow(2px 2px 2px grey)", display: "inline-flex" }}>
+                        <TextField
+                            margin="normal"
+                            required
+                            multiline
+                            rows={10}
+                            fullWidth
+                            variant="standard"
+                            id="photo"
+                            value={imageURL}
+                            onChange={event => setImageURL(event.target.value)}
+                            placeholder="Wanna add an image? Add an URL!"
+                            name='photo'
+                            InputProps={{ disableUnderline: true, style: { textAlign: "center", fontFamily: "Cabin Sketch", fontWeight: "bold", textDecoration: "underline", textDecorationStyle: "dashed", textDecorationColor: "grey", height: "45vh", padding: 10 } }} />
+                    </Container>
+                    <Button sx={{ alignSelf: "flex-end", maxHeight: "50px", padding: 4, fontFamily: "Righteous", right: "15vw", bottom: "4vh", borderRadius: 20, border: 1, borderColor: "black", borderStyle: "dashed", backgroundColor: "#A97637", filter: "drop-shadow(3px 3px 3px grey)" }}
                         type="submit"
                         variant="contained"
                         size="large">
