@@ -9,21 +9,23 @@ import TextField from "@mui/material/TextField";
 
 const SearchBar = ({ setSearchQuery }: any) => (
   <form onReset={() => setSearchQuery("")}>
-    <TextField sx={{ filter: "box-shadow(2px 3px 20px black, 0 0 60px #8a4d0f inset)", background: "#fffef0", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", width: "30vw" }}
-      id="search-bar"
-      className="text"
-      onInput={(e) => {
-        setSearchQuery((e.target as HTMLInputElement).value);
-      }}
-      label="Looking for something?"
-      variant="outlined"
-      placeholder="Search..."
-      size="medium"
-      InputLabelProps={{ style: { fontFamily: "Cabin Sketch" } }}
-    />
-    <IconButton type="reset" aria-label="search">
-      <ClearIcon style={{ fill: "black" }} />
-    </IconButton>
+    <Container sx={{ display: "flex", flexDirection: "row" }}>
+      <TextField sx={{ filter: "box-shadow(2px 3px 20px black, 0 0 60px #8a4d0f inset)", background: "#fffef0", borderTopLeftRadius: "255px 15px", borderTopRightRadius: "15px 225px", borderBottomRightRadius: "225px 15px", borderBottomLeftRadius: "15px 255px", width: "30vw" }}
+        id="search-bar"
+        className="text"
+        onInput={(e) => {
+          setSearchQuery((e.target as HTMLInputElement).value);
+        }}
+        label="Looking for something?"
+        variant="outlined"
+        placeholder="Search..."
+        size="medium"
+        InputLabelProps={{ style: { fontFamily: "Cabin Sketch" } }}
+      />
+      <IconButton type="reset" aria-label="search">
+        <ClearIcon style={{ fill: "black" }} />
+      </IconButton>
+    </Container>
   </form>
 );
 
