@@ -61,9 +61,8 @@ export function Register() {
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                    }}
-                >
-                    <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1, width: "80vh" }}>
+                    }}>
+                    <Box component="form" noValidate onSubmit={handleSubmit} sx={{ width: "80vh" }}>
                         <TextField
                             variant="standard"
                             margin="normal"
@@ -116,7 +115,6 @@ export function Register() {
                                     Already have an account? Sign in!
                                 </Link>
                             </Grid>
-
                         </Grid>
                     </Box>
                 </Box>
