@@ -106,7 +106,7 @@ export function Login() {
                                 <Grid item xs></Grid>
                                 <Grid item style={{ paddingBottom: 20, transform: "translate(0vh, -5vh)" }}>
                                     <Link className="doit" component={RouterLink} to="/register" variant="body2" underline="always" style={{ color: "darkred", fontFamily: "Righteous", filter: "drop-shadow(1px 1px 1px black)" }}>
-                                        <img className="ducktrigger" src={require("../stickers/uralreadydead.png")} alt="register... or die." />
+                                        <img src={require("../stickers/uralreadydead.png")} alt="register... or die." />
                                     </Link>
 
                                 </Grid>

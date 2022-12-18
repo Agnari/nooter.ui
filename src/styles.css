@@ -140,14 +140,14 @@ CheckCircleOutlineIcon {
   width: 30px;
 }
 
-.ducktrigger {
+.doit img {
   height: 3.9682539682539684vw;
   width: 3.9682539682539684vw;
   transform: scaleX(-1) rotate(6deg);
   filter: drop-shadow(1px 1px 1px black);
 }
 
-.ducktrigger:hover {
+.doit img:hover {
 
   animation: shake 0.5s;
   animation-iteration-count: infinite;

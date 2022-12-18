@@ -75,7 +75,7 @@ export function Comments() {
     return (
         <>
             <main>
-                <Container sx={{ maxWidth: '95vw', width: '90vw', align: 'center' }}>
+                <Container sx={{ width: '30vw', marginTop:2 }}>
                     <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, white, lightgrey)" }}>
                         <CardContent sx={{ size: "fixed", marginLeft: 5 }}>
                             <Typography variant="h4" align="center" sx={{ overflowWrap: "break-word", fontFamily: "Righteous" }}>
@@ -89,41 +89,44 @@ export function Comments() {
                                         <ListItemAvatar>
                                             <Avatar alt="?" src="/static/images/avatar/1.jpg" />
                                         </ListItemAvatar>
+                                        <Container sx={{ display: "flex", fkexDirection: "row" }}>
+                                            <React.Fragment>
+                                                <Typography
+                                                    sx={{ display: 'inline' }}
+                                                    component="span"
+                                                    variant="body2"
+                                                    color="text.primary"
+                                                />
+                                                <TextField sx={{ width: "9vw" }}
+                                                    variant="standard"
+                                                    fullWidth
+                                                    id="text"
+                                                    placeholder="Comment here"
+                                                    name='text'
+                                                    value={value}
+                                                    onChange={(e) => setValue(e.target.value)}
+                                                />
 
-                                        <React.Fragment>
-                                            <Typography
-                                                sx={{ display: 'inline' }}
-                                                component="span"
-                                                variant="body2"
-                                                color="text.primary"
-                                            />
-                                            <TextField
-                                                variant="standard"
-                                                fullWidth
-                                                id="text"
-                                                placeholder="Comment here"
-                                                name='text'
-                                                value={value}
-                                                onChange={(e) => setValue(e.target.value)}
-                                            />
-                                            <Button
-                                                type="submit"
-                                                variant="contained">
-                                                Submit
-                                            </Button>
-                                        </React.Fragment>
+                                            </React.Fragment>
+                                        </Container>
+                                        <Button sx={{ background: "orange" }}
+                                            type="submit"
+                                            variant="contained"
+                                            size="small">
+                                            Submit
+                                        </Button>
                                     </ListItem>
                                 </Card>
                             </Box>}
-                            <Grid container spacing={0.5} sx={{ transform: "translate(1.5873015873015872vw, -3vw)", paddingTop: '5vh' }}>
+                            <Grid container spacing={0.5}>
                                 {items && items.map((Comment: any) => (
                                     <Grid item key={Comment.id}>
-                                        <Card sx={{ border: 1, borderRadius: '50px' }}>
+                                        <Card sx={{ border: 1, borderRadius: '50px', maxWidth: "25vw" }}>
                                             <ListItem alignItems="flex-start">
                                                 <ListItemAvatar>
                                                     <Avatar alt="?" src="/static/images/avatar/1.jpg" />
                                                 </ListItemAvatar>
-                                                <ListItemText
+                                                <ListItemText sx={{}}
                                                     primary={Comment.commenterName}
                                                     secondary={
                                                         <React.Fragment>
