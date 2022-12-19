@@ -75,10 +75,10 @@ export function Comments() {
     return (
         <>
             <main>
-                <Container sx={{ width: '30vw', marginTop:2 }}>
-                    <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, white, lightgrey)" }}>
+                <Container sx={{width:"33vw", marginTop:2}}>
+                    <Card sx={{padding:3}}>
                         <CardContent sx={{ size: "fixed", marginLeft: 5 }}>
-                            <Typography variant="h4" align="center" sx={{ overflowWrap: "break-word", fontFamily: "Righteous" }}>
+                            <Typography variant="h4" sx={{ overflowWrap: "break-word", fontFamily: "Righteous", textAlign:"center"}}>
                                 Comments
                             </Typography>
                         </CardContent>
@@ -86,10 +86,7 @@ export function Comments() {
                             {user && <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
                                 <Card sx={{ border: 1, borderRadius: '50px' }}>
                                     <ListItem alignItems="flex-start">
-                                        <ListItemAvatar>
-                                            <Avatar alt="?" src="/static/images/avatar/1.jpg" />
-                                        </ListItemAvatar>
-                                        <Container sx={{ display: "flex", fkexDirection: "row" }}>
+                                        <Container sx={{ display: "flex", flexDirection: "row"}}>
                                             <React.Fragment>
                                                 <Typography
                                                     sx={{ display: 'inline' }}
@@ -97,7 +94,7 @@ export function Comments() {
                                                     variant="body2"
                                                     color="text.primary"
                                                 />
-                                                <TextField sx={{ width: "9vw" }}
+                                                <TextField sx={{ width: "14vw" }}
                                                     variant="standard"
                                                     fullWidth
                                                     id="text"
@@ -108,28 +105,25 @@ export function Comments() {
                                                 />
 
                                             </React.Fragment>
-                                        </Container>
-                                        <Button sx={{ background: "orange" }}
+                                        <Button sx={{ background: "orange", left:"1vw" }}
                                             type="submit"
                                             variant="contained"
                                             size="small">
                                             Submit
                                         </Button>
+                                        </Container>
                                     </ListItem>
                                 </Card>
                             </Box>}
-                            <Grid container spacing={0.5}>
+                            <Grid container spacing={1} sx={{marginTop:3, borderTop: 3, borderTopStyle:"double"}}>
                                 {items && items.map((Comment: any) => (
                                     <Grid item key={Comment.id}>
-                                        <Card sx={{ border: 1, borderRadius: '50px', maxWidth: "25vw" }}>
+                                        <Card sx={{border: 1, borderRadius: '50px', maxWidth: "29vw", padding:1}}>
                                             <ListItem alignItems="flex-start">
-                                                <ListItemAvatar>
-                                                    <Avatar alt="?" src="/static/images/avatar/1.jpg" />
-                                                </ListItemAvatar>
                                                 <ListItemText sx={{}}
-                                                    primary={Comment.commenterName}
+                                                    primary= {Comment.commenterName}
                                                     secondary={
-                                                        <React.Fragment>
+                                                        <Container sx={{wordBreak:"break-word"}}>
                                                             <Typography
                                                                 sx={{ display: 'inline' }}
                                                                 component="span"
@@ -138,7 +132,7 @@ export function Comments() {
                                                             >
                                                             </Typography>
                                                             {Comment.text}
-                                                        </React.Fragment>
+                                                        </Container>
                                                     }
                                                 />
                                             </ListItem>
