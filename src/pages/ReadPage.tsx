@@ -28,12 +28,13 @@ export function ReadPage() {
     return (
         <>
             <main>
-                <Container sx={{ display: "flex", flexDirection: "row", gap: 1 }}>
+                <Container sx={{ display: "flex", flexDirection: "row", gap: 5 }}>
                     <Box sx={{ marginTop: 2 }}>
                         <Container sx={{ width: '60vw' }}>
 
-                            <Card sx={{ paddingBottom: "5vw"}}>
+                            <Card sx={{ paddingBottom: "5vw", borderRadius: 3, border: 5, borderStyle: "dashed", background: "linear-gradient(45deg, white, lightgrey)" }}>
                                 <CardMedia sx={{ borderBottomColor: "black", borderRadius: 3, borderBottom: 10, borderBottomStyle: "double", objectFit: "contain" }}
+
                                     component="img"
                                     width="500px"
                                     height="500px"
