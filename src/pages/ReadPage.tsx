@@ -1,10 +1,9 @@
 import '../styles.css'
-import { useParams, useSearchParams } from "react-router-dom";
-import { Typography, Card, CardActions, CardContent, CardMedia, Grid, Container, Button } from "@mui/material";
-import React from "react";
+import { useParams } from "react-router-dom";
+import { Typography, Card, CardContent, CardMedia, Container } from "@mui/material";
 import { useEffect, useState } from "react";
 import Box from '@mui/material/Box';
-import { Comments } from '../Components/Comments'
+import { Comments } from '../components/Comments'
 
 export function ReadPage() {
     const { id } = useParams()
@@ -14,7 +13,7 @@ export function ReadPage() {
     const [imageURL, setImageURL] = useState("");
 
     useEffect(() => {
-        fetch("https://localhost:7018/api/articles/" + id)
+        fetch(`${process.env.REACT_APP_API_URL}/api/articles/` + id)
             .then(res => res.json())
             .then(
                 (result) => {
