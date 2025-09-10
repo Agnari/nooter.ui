@@ -6,9 +6,6 @@
 
 # Test coverage
 /coverage
-
-# Environment variables
-.env*
   
 # Editor/IDE files
 .vscode/
