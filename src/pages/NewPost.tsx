@@ -3,14 +3,9 @@ import '../styles.css';
 import { Container } from "@mui/system";
 import TextField from '@mui/material/TextField'
 import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import { useNavigate } from 'react-router-dom';
-import CssBaseline from '@mui/material/CssBaseline';
-import Swal from 'sweetalert2'
-import { rootCertificates } from "tls";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import * as React from 'react';
-import Stack from '@mui/material/Stack';
 import { getToken } from "../utils/auth";
 
 export function NewPost() {
@@ -74,7 +69,7 @@ export function NewPost() {
                 })
             };
 
-            fetch('https://localhost:7018/api/articles', requestOptions)
+            fetch(`${process.env.REACT_APP_API_URL}/api/articles`, requestOptions)
                 .then(result => result.json())
                 .then((article) => {
                     navigate(`/read/${article.id}`);

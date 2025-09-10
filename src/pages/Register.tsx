@@ -1,5 +1,4 @@
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
@@ -27,7 +26,7 @@ export function Register() {
                 password: data.get('password'),
             })
         };
-        fetch('https://localhost:7018/api/users', requestOptions)
+        fetch(`${process.env.REACT_APP_API_URL}/api/users`, requestOptions)
             .then(response => {
                 console.log(response)
                 if (response.ok) {

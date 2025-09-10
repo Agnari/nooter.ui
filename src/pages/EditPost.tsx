@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import React from 'react';
 import { getToken } from "../utils/auth";
 
+
 export function EditPost() {
     const [id, setId] = useSearchParams();
 
@@ -22,7 +23,7 @@ export function EditPost() {
     const [imageURL, setImageURL] = useState('');
 
     useEffect(() => {
-        fetch("https://localhost:7018/api/articles/" + id.get("id"))
+        fetch(`${process.env.REACT_APP_API_URL}/api/articles/` + id.get("id"))
             .then(res => res.json())
             .then(
                 (result) => {
@@ -73,7 +74,7 @@ export function EditPost() {
                     authorId: user.userId,
                 })
             };
-            fetch('https://localhost:7018/api/articles/' + id.get("id"), requestOptions)
+            fetch(`${process.env.REACT_APP_API_URL}/api/articles/` + id.get("id"), requestOptions)
                 .then(() => navigate("/yourposts/user?id=" + user.userId))
 
             Swal.fire({

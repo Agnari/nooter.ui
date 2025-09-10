@@ -36,7 +36,7 @@ export function Home() {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    fetch("https://localhost:7018/api/articles")
+    fetch(`${process.env.REACT_APP_API_URL}/api/articles`)
       .then(res => res.json())
       .then(
         (result) => {

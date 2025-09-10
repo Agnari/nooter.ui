@@ -3,7 +3,6 @@ import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
-import Stack from '@mui/material/Stack';
 import Container from '@mui/material/Container';
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from 'react-router-dom';
@@ -18,7 +17,7 @@ export function YourPosts() {
 
     const [items, setItems] = useState([]);
     useEffect(() => {
-        fetch("https://localhost:7018/api/articles/" + id.get("id") + "/usersAllArticles")
+        fetch(`${process.env.REACT_APP_API_URL}/api/articles/` + id.get("id") + `/usersAllArticles`)
             .then(res => res.json())
             .then(
                 (result) => {
@@ -48,7 +47,7 @@ export function YourPosts() {
                     'Article has been deleted.',
                     'success'
                 )
-                fetch("https://localhost:7018/api/articles/" + id, {
+                fetch(`${process.env.REACT_APP_API_URL}/api/articles/` + id, {
                     headers: {
                         'Authorization': `Bearer ${token}`,
                         'Content-Type': 'application/json'

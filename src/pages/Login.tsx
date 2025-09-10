@@ -1,15 +1,12 @@
 import Button from '@mui/material/Button';
-import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import '../styles.css';
-import { createRef, useRef } from 'react';
-import Swal from 'sweetalert2';
+import { createRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import React from 'react';
 import { Link as RouterLink} from 'react-router-dom';
 
 export function Login() {
@@ -30,14 +27,14 @@ export function Login() {
                 password: passwordRef.current.value,
             })
         };
-        fetch('https://localhost:7018/api/account/login', requestOptions)
+        fetch(`${process.env.REACT_APP_API_URL}/api/account/login`, requestOptions)
             .then(response => {
                 if (response.ok) {
                     return response.json()
                         .then((result) => {
                             localStorage.setItem("USER", JSON.stringify(result));
                         })
-                        .then(() => window.location.href = "/home")
+                        .then(() => window.location.href = "/")
                 }
                 else {
                     console.log(response)
